@@ -2394,48 +2394,26 @@ body {
 .cid-qWW5p3Xite blockquote {
   color: #767676;
 }
-.cid-qX68GkYDkW {
+.cid-qX6qxPhMXp {
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #ffffff;
 }
-.cid-qX68GkYDkW .socicon-bg-facebook {
-  background: #3e5b98;
-  color: #ffffff;
-}
-.cid-qX68GkYDkW .socicon-bg-twitter {
-  background: #4da7de;
-  color: #ffffff;
-}
-.cid-qX68GkYDkW .socicon-bg-googleplus {
-  background: #dd4b39;
-  color: #ffffff;
-}
-.cid-qX68GkYDkW .socicon-bg-vkontakte {
-  background: #5a7fa6;
-  color: #ffffff;
-}
-.cid-qX68GkYDkW .socicon-bg-odnoklassniki {
-  background: #f48420;
-  color: #ffffff;
-}
-.cid-qX68GkYDkW .socicon-bg-pinterest {
-  background: #c92619;
-  color: #ffffff;
-}
-.cid-qX68GkYDkW .socicon-bg-mail {
-  background: #134785;
-  color: #ffffff;
-}
-.cid-qX68GkYDkW .btn-social {
-  border: none !important;
-}
-.cid-qX68GkYDkW [class^="socicon-"]:before,
-.cid-qX68GkYDkW [class*=" socicon-"]:before {
+.cid-qX6qxPhMXp [class^="socicon-"]:before,
+.cid-qX6qxPhMXp [class*=" socicon-"]:before {
   line-height: 44px;
 }
+.cid-qX6qxPhMXp .btn-social {
+  border-color: #149dcc;
+}
+.cid-qX6qxPhMXp .btn-social:hover {
+  background: #149dcc;
+}
+.cid-qX6qxPhMXp .btn-social:hover i.socicon {
+  color: #ffffff !important;
+}
 @media (max-width: 767px) {
-  .cid-qX68GkYDkW .btn {
+  .cid-qX6qxPhMXp .btn {
     font-size: 20px !important;
   }
 }
@@ -3940,48 +3918,26 @@ body {
 .cid-qX5EJWvmjb .google-map[data-state="loading"] [data-state-details] {
   display: none;
 }
-.cid-qX68gYFrnA {
+.cid-qX6qoddcBu {
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #ffffff;
 }
-.cid-qX68gYFrnA .socicon-bg-facebook {
-  background: #3e5b98;
-  color: #ffffff;
-}
-.cid-qX68gYFrnA .socicon-bg-twitter {
-  background: #4da7de;
-  color: #ffffff;
-}
-.cid-qX68gYFrnA .socicon-bg-googleplus {
-  background: #dd4b39;
-  color: #ffffff;
-}
-.cid-qX68gYFrnA .socicon-bg-vkontakte {
-  background: #5a7fa6;
-  color: #ffffff;
-}
-.cid-qX68gYFrnA .socicon-bg-odnoklassniki {
-  background: #f48420;
-  color: #ffffff;
-}
-.cid-qX68gYFrnA .socicon-bg-pinterest {
-  background: #c92619;
-  color: #ffffff;
-}
-.cid-qX68gYFrnA .socicon-bg-mail {
-  background: #134785;
-  color: #ffffff;
-}
-.cid-qX68gYFrnA .btn-social {
-  border: none !important;
-}
-.cid-qX68gYFrnA [class^="socicon-"]:before,
-.cid-qX68gYFrnA [class*=" socicon-"]:before {
+.cid-qX6qoddcBu [class^="socicon-"]:before,
+.cid-qX6qoddcBu [class*=" socicon-"]:before {
   line-height: 44px;
 }
+.cid-qX6qoddcBu .btn-social {
+  border-color: #149dcc;
+}
+.cid-qX6qoddcBu .btn-social:hover {
+  background: #149dcc;
+}
+.cid-qX6qoddcBu .btn-social:hover i.socicon {
+  color: #ffffff !important;
+}
 @media (max-width: 767px) {
-  .cid-qX68gYFrnA .btn {
+  .cid-qX6qoddcBu .btn {
     font-size: 20px !important;
   }
 }
@@ -4579,48 +4535,26 @@ body {
 .cid-qX5Gl77L0z .google-map[data-state="loading"] [data-state-details] {
   display: none;
 }
-.cid-qX67FsulSz {
+.cid-qX6qdirLaS {
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #ffffff;
 }
-.cid-qX67FsulSz .socicon-bg-facebook {
-  background: #3e5b98;
-  color: #ffffff;
-}
-.cid-qX67FsulSz .socicon-bg-twitter {
-  background: #4da7de;
-  color: #ffffff;
-}
-.cid-qX67FsulSz .socicon-bg-googleplus {
-  background: #dd4b39;
-  color: #ffffff;
-}
-.cid-qX67FsulSz .socicon-bg-vkontakte {
-  background: #5a7fa6;
-  color: #ffffff;
-}
-.cid-qX67FsulSz .socicon-bg-odnoklassniki {
-  background: #f48420;
-  color: #ffffff;
-}
-.cid-qX67FsulSz .socicon-bg-pinterest {
-  background: #c92619;
-  color: #ffffff;
-}
-.cid-qX67FsulSz .socicon-bg-mail {
-  background: #134785;
-  color: #ffffff;
-}
-.cid-qX67FsulSz .btn-social {
-  border: none !important;
-}
-.cid-qX67FsulSz [class^="socicon-"]:before,
-.cid-qX67FsulSz [class*=" socicon-"]:before {
+.cid-qX6qdirLaS [class^="socicon-"]:before,
+.cid-qX6qdirLaS [class*=" socicon-"]:before {
   line-height: 44px;
 }
+.cid-qX6qdirLaS .btn-social {
+  border-color: #149dcc;
+}
+.cid-qX6qdirLaS .btn-social:hover {
+  background: #149dcc;
+}
+.cid-qX6qdirLaS .btn-social:hover i.socicon {
+  color: #ffffff !important;
+}
 @media (max-width: 767px) {
-  .cid-qX67FsulSz .btn {
+  .cid-qX6qdirLaS .btn {
     font-size: 20px !important;
   }
 }

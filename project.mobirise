@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "My Site",
-    "currentPage": "page6.html",
+    "currentPage": "AboutMe.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -4813,7 +4813,7 @@
         }
       ]
     },
-    "page6.html": {
+    "PIDController.html": {
       "settings": {
         "title": "What's inside the PID Controller Block?",
         "meta_descr": "",

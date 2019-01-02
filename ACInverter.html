@@ -7,15 +7,16 @@
   <meta name="generator" content="Mobirise v4.7.10, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/mylogo-122x65.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title>About Me</title>
+  <meta name="description" content="Three level 120Vrms AC Inverter Simulation using LTSPICE. PWM based. PID controlled">
+  <title>AC Inverter</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/facebook-plugin/style.css">
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
@@ -37,7 +38,7 @@
 <!-- /Google Analytics -->
 
 
-  <section class="menu cid-qWPYkbGhPc" once="menu" id="menu1-4">
+  <section class="menu cid-rdY4WN392c" once="menu" id="menu1-2r">
 
     
 
@@ -76,7 +77,62 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobiri.se/t">free amp templates</a></section><section class="testimonials3 cid-qWQ0uDTysd" id="testimonials3-7">
+<section class="engine"><a href="https://mobiri.se/j">website templates</a></section><section class="header4 cid-rdYaIQu3yT" id="header4-2t">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="media-content col-md-10">
+                <h1 class="mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style display-1">Three level AC Inverter Simulation</h1>
+                
+                <div class="mbr-text align-center mbr-white pb-3">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        The circuit below is a PID controlled 40KHz PWM based converter that generates a 60Hz 120Vrms waveform from two 225Vdc supplies (V1 and V9 in the circuit below).&nbsp;<br>M1 MOSFET is the switch used to increase the output magnitude for the positive cycle. When output magnitude is increased during the positive cycle, the output capacitor C1 charges from the positive DC bus (V1).
+<br>M2 MOSFET is the switch used to increase the output magnitude for the negative cycle. When output magnitude is increased during the negative cycle, the output capacitor C1 charges from the negative DC bus (V9).
+<br>M3 and M4 MOSFETs are simultaneous and are used to continue the current on L1 after M1/M2. M1 and M4 are also used to decrease the magnitude on the output. When output magnitude is decreased, the output capacitor C1 discharges to the positive DC bus (V1) during the positive cycle and to the negative DC bus (V9) during the negative cycle. <br>L2, L3, L4 and L5 are just parasitic inductances. Its values can be changed to see the effect on the MOSFET voltage spikes or output ripple.
+<br>C6, R10, C9, R11, C7, C8, C2 and R2 are dampers to lessen the voltage spikes across the MOSFETs.
+<br>B3, R3, B4, R4, B5, R5, B6 and R6 are simplified gate drive circuits. In real application, gate drive circuits have its own isolated supply and usually optically controlled.
+<br>R1 is the load. In this application, full load is 42 ohms.
+<br><br>Download the simulation files <a href="assets/files/AC%20inverter.zip">here</a>.<br>&nbsp;<br></p>
+                </div>
+                
+            </div>
+            <div class="mbr-figure pt-5">
+                <img src="assets/images/ac-inverter-1330x910.jpg" alt="Mobirise" title="" style="width: 60%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header4 cid-rdYk7vaCyX" id="header4-2u">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="media-content col-md-10">
+                
+                
+                <div class="mbr-text align-center mbr-white pb-3">
+                    <p class="mbr-text mbr-fonts-style display-5">
+                        Below is the truth table for the switches M1, M2, M3 and M4.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="mbr-figure pt-5">
+                <img src="assets/images/switch-truthtable-440x575.png" alt="Mobirise" title="" style="width: 60%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header3 cid-rdYmg82w67" id="header3-2v">
 
     
 
@@ -84,23 +140,109 @@
 
     <div class="container">
         <div class="media-container-row">
-            <div class="media-content px-3 align-self-center mbr-white py-2">
-                <p class="mbr-text testimonial-text mbr-fonts-style display-7">
-                   <br><br><br><br>4-Jul-2018<br><br>I was born on 11-Nov-1973 in Dadiangas &nbsp;that is now known as GenSan, Philippines but currently living in Cavite, Philippines.<br><br>I've completed Bachelor of Science in Electronics and Communications Engineering at the Cebu Institute of Technology but I've only practiced in the Electronics Field. I've also completed Master of Science in Electronics and Communications Engineering at the De La Salle University. Besides electronics and programming, I love to learn languages such as German and Japanese, Fishing, Cycling and Windsurfing.<br><br>I have created this site to share some unique experiences and knowledge in my life which could be useful to someone out there or for me in case I need to recall something.<br><br></p>
-                <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7">
-                   Andrew Mosqueda</p>
-                <p class="mbr-author-desc mbr-fonts-style display-7">
-                   ELECTRONICS ENGINEER</p>
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/inverter-controller-638x256.png" alt="Mobirise" title="">
             </div>
 
-            <div class="mbr-figure pl-lg-5" style="width: 130%;">
-              <img src="assets/images/wp-20170221-16-32-50-pro-1162x759.jpg" alt="" title="">
+            <div class="media-content">
+                
+                <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-2">
+                    Controller</h3>
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-7">VREF (Input) – Reference signal to be generated by the inverter. 
+<br>VFEED (Input) – Actual voltage output of the inverter. This input can have ripple so an anti-alias filter is needed. The anti-alias filter should filter out bandwidth greater than 20KHz (Half the bandwidth of the switching frequency).
+<br>CFEED (Input) – Actual current on L1 inductor filter. Filtering is not the same with VFEED because the actual switching current need to be detected fast.
+<br>SAW (Input) – Triangle signal to be used for the PWM control.
+<br>PG (Input) – Proportional gain control constant.
+<br>IG (Input) – Integral gain control constant.
+<br>DG (Input) – Differential gain control constant.
+<br>S1 (Output) – controls the switching of M1 MOSFET.
+<br>+SW (Output) – controls the switching of M3 MOSFET. Signal is equal to -SW.
+<br>S3 (Output) – controls the switching of M2 MOSFET.
+<br>-SW (Output) – controls the switching of M4 MOSFET. Signal is equal to +SW.
+<br>PID_OUT (Output) – PID value debug output.
+<br>PID_SH_CLK (Output) – Miscellaneous debug output.&nbsp;<br></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="header3 cid-rdYOqyMD7c" id="header3-2w">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/01.jpg" alt="Mobirise">
+            </div>
+
+            <div class="media-content">
+                
+                <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-5">Sample Simulation: P Control Only</h3>
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Full width intro with image background, color overlay and a picture on the left. You can easily change the size of image in block parameters.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="mbr-section mbr-section__comments" id="facebook-comments-block-2p" data-rv-view="323" style="background-color: rgb(255, 255, 255); padding-top: 0rem; padding-bottom: 0rem;">
+         
+    <div class="mbr-section__container mbr-section__container--isolated addons-container">
+        <div class="addons-row">
+            <div class="addons-container-inner"><div class="facebookPlaceholder" data-numposts="5"><h2>FACEBOOK COMMENTS WILL BE SHOWN ONLY WHEN YOUR SITE IS ONLINE</h2> <img src="assets/images/facebook-comments.jpg"></div></div>
+            
+           
+        </div>
+    </div>
+</section>
+
+<section class="cid-rdY4WMvThJ" id="social-buttons3-2q">
+    
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-8 align-center">
+                <h2 class="pb-3 mbr-section-title mbr-fonts-style display-2">
+                    SHARE THIS PAGE!
+                </h2>
+                <div>
+                    <div class="mbr-social-likes">
+                        <span class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
+                            <i class="socicon socicon-facebook"></i>
+                        </span>
+                        
+                        <span class="btn btn-social plusone socicon-bg-googleplus mx-2" title="Share link on Google+">
+                            <i class="socicon socicon-googleplus"></i>
+                        </span>
+                        
+                        
+                        <span class="btn btn-social pinterest socicon-bg-pinterest mx-2" title="Share link on Pinterest">
+                            <i class="socicon socicon-pinterest"></i>
+                        </span>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="cid-qWPYkcy6nC" id="footer1-6">
+<section class="cid-rdY4WNyWhA" id="footer1-2s">
 
     
 
@@ -195,7 +337,11 @@
   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5"></script>
+  <script src="https://apis.google.com/js/plusone.js"></script>
+  <script src="assets/facebook-plugin/facebook-script.js"></script>
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/sociallikes/social-likes.js"></script>
   <script src="assets/dropdown/js/script.min.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>

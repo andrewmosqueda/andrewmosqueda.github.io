@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.1.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/mylogo-122x65.png" type="image/x-icon">
+  <meta name="description" content="Three level 120Vrms AC Inverter Simulation using LTSPICE. PWM based. PID controlled">
+  
+  
+  <title>AC Inverter</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+
+<!-- Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122083329-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122083329-1');
+</script>
+<!-- /Analytics -->
+
+
+  
+  <section class="menu cid-rdY4WN392c" once="menu" id="menu1-2r">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="mailto:andrewgs7311@gmail.com">
+                         <img src="assets/images/mylogo-122x65.png" alt="Mobirise" title="" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="mailto:andrewgs7311@gmail.com">ANDREW MOSQUEDA</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="index.html">
+                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>Home</a>
+                </li>
+                <li class="nav-item dropdown open"><a class="nav-link link text-white dropdown-toggle display-4" href="articles.html" data-toggle="dropdown-submenu" aria-expanded="true">
+                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Blogs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="Blog1.html" aria-expanded="false">PID Control for Buck Converter</a><a class="text-white dropdown-item display-4" href="PIDController.html">About the PID Controller</a><a class="text-white dropdown-item display-4" href="CurrentModeConverter.html">Current Mode Buck Converter</a><a class="text-white dropdown-item display-4" href="DasolPaddleboarding.html">Paddleboarding in Dasol</a><a class="text-white dropdown-item display-4" href="Paniman.html">Paniman Beach, Ternate, Cavite</a><a class="text-white dropdown-item display-4" href="ACInverter.html" aria-expanded="true">AC Inverter</a></div></li><li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="AboutMe.html">
+                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        About Me &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                </li></ul>
+            
+        </div>
+    </nav>
+</section>
+
+<section class="header4 cid-rdYaIQu3yT" id="header4-2t">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="media-content col-md-10">
+                <h1 class="mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style display-1">Three level AC Inverter Simulation</h1>
+                
+                <div class="mbr-text align-center mbr-white pb-3">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        The circuit below is a PID controlled 40KHz PWM based converter that generates a 60Hz 120Vrms waveform from two 225Vdc supplies (V1 and V9 in the circuit below).&nbsp;<br>M1 MOSFET is the switch used to increase the output magnitude for the positive cycle. When output magnitude is increased during the positive cycle, the output capacitor C1 charges from the positive DC bus (V1).
+<br>M2 MOSFET is the switch used to increase the output magnitude for the negative cycle. When output magnitude is increased during the negative cycle, the output capacitor C1 charges from the negative DC bus (V9).
+<br>M3 and M4 MOSFETs are simultaneous and are used to continue the current on L1 after M1/M2. M1 and M4 are also used to decrease the magnitude on the output. When output magnitude is decreased, the output capacitor C1 discharges to the positive DC bus (V1) during the positive cycle and to the negative DC bus (V9) during the negative cycle. <br>L2, L3, L4 and L5 are just parasitic inductances. Its values can be changed to see the effect on the MOSFET voltage spikes or output ripple.
+<br>C6, R10, C9, R11, C7, C8, C2 and R2 are dampers to lessen the voltage spikes across the MOSFETs.
+<br>B3, R3, B4, R4, B5, R5, B6 and R6 are simplified gate drive circuits. In real application, gate drive circuits have its own isolated supply and usually optically controlled.
+<br>R1 is the load. In this application, full load is 42 ohms.
+<br><br>Download the simulation files <a href="assets/files/AC%20inverter.zip">here</a>.<br>&nbsp;<br></p>
+                </div>
+                
+            </div>
+            <div class="mbr-figure pt-5">
+                <img src="assets/images/ac-inverter-1330x910.png" alt="Mobirise" title="" style="width: 60%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header4 cid-rdYk7vaCyX" id="header4-2u">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="media-content col-md-10">
+                
+                
+                <div class="mbr-text align-center mbr-white pb-3">
+                    <p class="mbr-text mbr-fonts-style display-5">
+                        Below is the truth table for the switches M1, M2, M3 and M4.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="mbr-figure pt-5">
+                <img src="assets/images/switch-truthtable-440x575.png" alt="Mobirise" title="" style="width: 60%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header3 cid-rdYmg82w67" id="header3-2v">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/inverter-controller-638x256.png" alt="Mobirise" title="">
+            </div>
+
+            <div class="media-content">
+                
+                <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-2">
+                    Controller</h3>
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-7">VREF (Input) – Reference signal to be generated by the inverter. 
+<br>VFEED (Input) – Actual voltage output of the inverter. This input can have ripple so an anti-alias filter is needed. The anti-alias filter should filter out bandwidth greater than 20KHz (Half the bandwidth of the switching frequency).
+<br>CFEED (Input) – Actual current on L1 inductor filter. Filtering is not the same with VFEED because the actual switching current need to be detected fast.
+<br>SAW (Input) – Triangle signal to be used for the PWM control.
+<br>PG (Input) – Proportional gain control constant.
+<br>IG (Input) – Integral gain control constant.
+<br>DG (Input) – Differential gain control constant.
+<br>S1 (Output) – controls the switching of M1 MOSFET.
+<br>+SW (Output) – controls the switching of M3 MOSFET. Signal is equal to -SW.
+<br>S3 (Output) – controls the switching of M2 MOSFET.
+<br>-SW (Output) – controls the switching of M4 MOSFET. Signal is equal to +SW.
+<br>PID_OUT (Output) – PID value debug output.
+<br>PID_SH_CLK (Output) – Miscellaneous debug output.&nbsp;<br></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="header3 cid-rdYOqyMD7c" id="header3-2w">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/inverterpcontrolled-930x816.png" alt="Mobirise" title="">
+            </div>
+
+            <div class="media-content">
+                
+                <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-5">Sample Simulation: P Control Only</h3>
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Set V6, V3 and V5 to 0.045, 0 and 0 respectively.<br><br>If proportional gain is only used, there is a big ripple on the output V(ac_out) and the error V(ref,ac_out) gets higher at the peak and when the reference voltage is approaching zero.<br> 
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="header3 cid-rdZd0gzJlQ" id="header3-2x">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/inverterpicontrolled-938x819.png" alt="Mobirise" title="">
+            </div>
+
+            <div class="media-content">
+                
+                <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-5">
+                    Sample Simulation: PI Control only</h3>
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Set V6, V3 and V5 to 0.045, 0.004 and 0 respectively.<br><br>If proportional gain and integral gain are only used, there is still a big ripple on the output V(ac_out) but the average error is reduced by the integral function.<br> 
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="header3 cid-rdZdLSSVxC" id="header3-2y">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/inverterpidcontrolled-931x818.png" alt="Mobirise" title="">
+            </div>
+
+            <div class="media-content">
+                
+                <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-5">
+                    Sample Simulation: PID Control</h3>
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Set V6, V3 and V5 to 0.045, 0.004 and 0.3 respectively.<br><br>If differential function is added aside from the Proportional and Integral functions, the ripple error is greatly reduced.<br><br><br> 
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="cid-rdY4WMvThJ" id="social-buttons3-2q">
+    
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-8 align-center">
+                <h2 class="pb-3 mbr-section-title mbr-fonts-style display-2">
+                    SHARE THIS PAGE!
+                </h2>
+                <div>
+                    <div class="mbr-social-likes">
+                        <span class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
+                            <i class="socicon socicon-facebook"></i>
+                        </span>
+                        
+                        <span class="btn btn-social plusone socicon-bg-googleplus mx-2" title="Share link on Google+">
+                            <i class="socicon socicon-googleplus"></i>
+                        </span>
+                        
+                        
+                        <span class="btn btn-social pinterest socicon-bg-pinterest mx-2" title="Share link on Pinterest">
+                            <i class="socicon socicon-pinterest"></i>
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cid-rdY4WNyWhA" id="footer1-2s">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row content text-white">
+            <div class="col-12 col-md-3">
+                <div class="media-wrap">
+                    <a href="mailto:andrewgs7311@gmail.com">
+                        <img src="assets/images/mylogo-192x102.png" alt="Mobirise" title="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Address
+                </h5>
+                <p class="mbr-text">Cavite, Philippines</p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Contacts
+                </h5>
+                <p class="mbr-text">
+                    Email: andrewgs7311@gmail.com<br></p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Links
+                </h5>
+                <p class="mbr-text">
+                    <a class="text-primary" href="https://mobirise.com/">Website builder</a>
+                    <br><a class="text-primary" href="https://mobirise.com/mobirise-free-win.zip">Download for Windows</a>
+                    <br><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip">Download for Mac</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="col-sm-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        © Copyright 2018 AndrewMosqueda - All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-list align-right">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.facebook.com/andrew.mosqueda" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="http://www.youtube.com" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://instagram.com" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://plus.google.com" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-googleplus socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.behance.net" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-behance socicon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/a" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Created with Mobirise <a href="https://mobirise.site/j" style="color:#aaa;">page</a> maker</p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/sociallikes/social-likes.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
+  
+  
+</body>
+</html>

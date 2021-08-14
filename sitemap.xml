@@ -1,151 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://github.com/andrewmosqueda/andrewmosqueda.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://andrewmosqueda.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/</loc>
+<loc>https://andrewmosqueda.github.io/</loc>
 </url>
 <url>
-<loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
+<loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
 <lastmod>2021-08-14T20:28:07+08:00</lastmod>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/Buck_Sense_Circuit-2.png</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Sense_Circuit-2.png</image:loc>
 <image:title><![CDATA[DM330028 Buck-Boost Output Sense Circuit]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/new_project_dialog_box_MPLAB-3.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/new_project_dialog_box_MPLAB-3.jpg</image:loc>
 <image:title><![CDATA[MPLAB New Project Dialog Box]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_select_device.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_select_device.jpg</image:loc>
 <image:title><![CDATA[MPLAB select device]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_select_compiler-3.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_select_compiler-3.jpg</image:loc>
 <image:title><![CDATA[MPLAB Select Compiler]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_project_name_and_folder-2.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_project_name_and_folder-2.jpg</image:loc>
 <image:title><![CDATA[MPLAB Project name and folder]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_select_device_slave.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_select_device_slave.jpg</image:loc>
 <image:title><![CDATA[MPLAB select device slave]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_Set_main_project.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_Set_main_project.jpg</image:loc>
 <image:title><![CDATA[MPLAB set as main project]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_device_resources_slavecore-2.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_device_resources_slavecore-2.jpg</image:loc>
 <image:title><![CDATA[MPLAB Device Resources Select Slave Core]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_project_resources_slavecore.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_project_resources_slavecore.jpg</image:loc>
 <image:title><![CDATA[MPLAB project resources slave core]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_slave_core_name-3.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_slave_core_name-3.jpg</image:loc>
 <image:title><![CDATA[MPLAB slave core name]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_pin_manager_master_slavepin_assign.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_pin_manager_master_slavepin_assign.jpg</image:loc>
 <image:title><![CDATA[MPLAB Master Pin Manager Slave Pin Assignment]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB-clock-output-pin-configuration.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB-clock-output-pin-configuration.jpg</image:loc>
 <image:title><![CDATA[MPLAB clock output pin configuration]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_device_resources_PWM.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_device_resources_PWM.jpg</image:loc>
 <image:title><![CDATA[MPLAB device resources PWM]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_generator_setting-3.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_generator_setting-3.jpg</image:loc>
 <image:title><![CDATA[MPLAB PWM Generator Settings]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_frequency_setting.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_frequency_setting.jpg</image:loc>
 <image:title><![CDATA[MPLAB PWM frequency setting]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_ADCtrigger_setting.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_ADCtrigger_setting.jpg</image:loc>
 <image:title><![CDATA[MPLAB PWM ADC Trigger Setting]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_DataUpdate_setting.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_PWM_DataUpdate_setting.jpg</image:loc>
 <image:title><![CDATA[MPLAB PWM Data Update Settings]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_device_resources_ADC.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_device_resources_ADC.jpg</image:loc>
 <image:title><![CDATA[MPLAB Device Resources ADC]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_ADC_SelectedChannels_setting-3.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_ADC_SelectedChannels_setting-3.jpg</image:loc>
 <image:title><![CDATA[MPLAB ADC Selected Channels Setting]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_Slave_Pin_Module.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_Slave_Pin_Module.jpg</image:loc>
 <image:title><![CDATA[MPLAB Slave Pin Module Setting]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_MCC_Notifications-2.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_MCC_Notifications-2.jpg</image:loc>
 <image:title><![CDATA[MPLAB MCC notification]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_add_secondary_project.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_add_secondary_project.jpg</image:loc>
 <image:title><![CDATA[MPLAB Add Secondary project to master]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_add_slavex.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_add_slavex.jpg</image:loc>
 <image:title><![CDATA[MPLAB Add slave to master]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_master_code.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_master_code.jpg</image:loc>
 <image:title><![CDATA[MPLAB master source]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_slave_code-2.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_slave_code-2.jpg</image:loc>
 <image:title><![CDATA[MPLAB Slave Code]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_program_button.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_program_button.jpg</image:loc>
 <image:title><![CDATA[MPLAB Program Button]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/MPLAB_programming_complete.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_programming_complete.jpg</image:loc>
 <image:title><![CDATA[MPLAB Programming Complete]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/DSPIC33CH_hardware_setup.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/DSPIC33CH_hardware_setup.jpg</image:loc>
 <image:title><![CDATA[DSPIC33CH curiosity laboratory setup]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\3/DSPIC33CH-buck-waveform.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/DSPIC33CH-buck-waveform.jpg</image:loc>
 <image:title><![CDATA[DS{IC33CH ADALM2000 buck pwm waveform]]></image:title>
 </image:image>
 </url>
 <url>
-<loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</loc>
+<loc>https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</loc>
 <lastmod>2021-08-14T20:37:07+08:00</lastmod>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\1/integrator_bench.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\1/integrator_bench.jpg</image:loc>
 <image:title><![CDATA[LTSPICE integrator]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\1/select_component_dialog.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\1/select_component_dialog.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/media\posts\1/LTSPICE-integrator-schematic.jpg</image:loc>
+<image:loc>https://andrewmosqueda.github.io/media\posts\1/LTSPICE-integrator-schematic.jpg</image:loc>
 <image:title><![CDATA[LTSPICE integrator schematic]]></image:title>
 </image:image>
 </url>
 <url>
-<loc>https://github.com/andrewmosqueda/andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>
+<loc>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>
 <lastmod>2021-08-08T11:58:25+08:00</lastmod>
 </url>
 </urlset>

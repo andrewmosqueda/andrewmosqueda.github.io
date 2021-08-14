@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-14T20:37:07+08:00</updated>
+    <updated>2021-08-14T21:37:21+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-08-14T20:28:07+08:00</updated>
+        <updated>2021-08-14T21:37:13+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -26,7 +26,7 @@
         <content type="html">
             <![CDATA[
                 <h2>Introduction</h2>
-<p>The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found hard to comprehend. So I made my own program that is written in C language and using PID for the close loop control. Only voltage loop control is covered by this topic. </p>
+<p>The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found hard to comprehend. So I made my own program that is written in C language and using PID for the close loop control. Only voltage loop control is covered by this topic.  </p>
 <h2>Buck-Boost Converter Circuit</h2>
 <p>Figure 1 below is the schematic of the buck boost circuit of the DSPIC33CH Curiousity Board. The DSPIC IC can control the buck transistor (Q6) switching through the RC14_S1PWM7H connection. Q6 is a PMOS so it needs a logic 0 to turn it on. The output of the converter (Vout) is sensed by the DSPIC IC through RC1_VOUTFB connection as shown in Figure 2. I am connecting a 100Ω resistor as load. For a 3.3V output, the power that will be drawn by the resistor is 3.3V*3.3V/100Ω = 109 milliwatt. RC15_S1PWM7L should be set to low all the time so that the boost transistor (Q2) is always open. </p>
 <figure class="post__image" ><br><img loading="lazy" src="https://andrewmosqueda.github.io/media/posts/3/Buck_Power_Circuit.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-xs.png 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-sm.png 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-md.png 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-lg.png 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-xl.png 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-2xl.png 1600w"  alt="DM330028 Buck Converter Power Circuit" width="970" height="633">
@@ -129,7 +129,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/"/>
         <id>https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</id>
 
-        <updated>2021-08-14T20:37:07+08:00</updated>
+        <updated>2021-08-14T21:37:21+08:00</updated>
             <summary>
                 <![CDATA[
                     If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the TestBench.asc file in LTSPICE: integrator.zip Below left is the schematic on the TestBench.asc file and below right side should be the result of&hellip;
@@ -137,7 +137,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p>If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the TestBench.asc file in LTSPICE:</p>
+                <p>If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the TestBench.asc file in LTSPICE: </p>
 <p><a href="https://andrewmosqueda.github.io/media/files/Integrator.zip" target="_blank" rel="noopener noreferrer">integrator.zip</a></p>
 <p>Below left is the schematic on the TestBench.asc file and below right side should be the result of the simulation.</p>
 <h2><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/1/integrator_bench.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/1/responsive/integrator_bench-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/1/responsive/integrator_bench-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/1/responsive/integrator_bench-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/1/responsive/integrator_bench-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/1/responsive/integrator_bench-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/1/responsive/integrator_bench-2xl.jpg 1600w"  alt="LTSPICE integrator" width="1915" height="883"></figure></h2>

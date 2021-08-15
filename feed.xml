@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-14T21:37:21+08:00</updated>
+    <updated>2021-08-15T14:44:22+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-08-14T21:37:13+08:00</updated>
+        <updated>2021-08-15T14:44:22+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -28,7 +28,7 @@
                 <h2>Introduction</h2>
 <p>The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found hard to comprehend. So I made my own program that is written in C language and using PID for the close loop control. Only voltage loop control is covered by this topic.  </p>
 <h2>Buck-Boost Converter Circuit</h2>
-<p>Figure 1 below is the schematic of the buck boost circuit of the DSPIC33CH Curiousity Board. The DSPIC IC can control the buck transistor (Q6) switching through the RC14_S1PWM7H connection. Q6 is a PMOS so it needs a logic 0 to turn it on. The output of the converter (Vout) is sensed by the DSPIC IC through RC1_VOUTFB connection as shown in Figure 2. I am connecting a 100Ω resistor as load. For a 3.3V output, the power that will be drawn by the resistor is 3.3V*3.3V/100Ω = 109 milliwatt. RC15_S1PWM7L should be set to low all the time so that the boost transistor (Q2) is always open. </p>
+<p>Figure 1 below is the schematic of the buck boost circuit of the DSPIC33CH Curiousity Board. The DSPIC IC can control the buck transistor (Q6) switching through the RC14_S1PWM7H connection. Q6 is a PMOS so it needs a logic 0 to turn it on. The output of the converter (Vout) is sensed by the DSPIC IC through RC1_VOUTFB connection as shown in Figure 2. I am connecting a 91Ω resistor as load. For a 3.3V output, the power that will be drawn by the resistor is 3.3V*3.3V/91Ω = 120 milliwatt. RC15_S1PWM7L should be set to low all the time so that the boost transistor (Q2) is always open. </p>
 <figure class="post__image" ><br><img loading="lazy" src="https://andrewmosqueda.github.io/media/posts/3/Buck_Power_Circuit.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-xs.png 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-sm.png 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-md.png 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-lg.png 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-xl.png 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/Buck_Power_Circuit-2xl.png 1600w"  alt="DM330028 Buck Converter Power Circuit" width="970" height="633">
 <figcaption >Figure 1 DSPIC33CH Curiosity Board Development Board Buck-Boost Converter Circuit</figcaption>
 </figure>
@@ -105,7 +105,7 @@
 <p>SLAVE CORE SOURCE CODE</p>
 <ol>
 <li>Open the main.c file on the slave project's Source Files folder.</li>
-<li>Below the #include "mcc_generated_files/system.h", add the following codes:<code><br>#include "mcc_generated_files/pin_manager.h"<br>#include "mcc_generated_files/pwm.h"<br>#include "mcc_generated_files/adc1.h"<br><br>/*PID function and variable definitions*/<br>void PID(void);<br>int16_t n16_integrator_memory;<br>int16_t n16_reference;<br>int16_t n16_error;<br>int16_t n16_proportional;<br><br>#define target_voltage  3.3<br>#define reference       666.7*target_voltage + 17.6<br>#define p_gain          0.1<br>#define i_gain          0.05</code></li>
+<li>Below the #include "mcc_generated_files/system.h", add the following codes:<code><br>#include "mcc_generated_files/pin_manager.h"<br>#include "mcc_generated_files/pwm.h"<br>#include "mcc_generated_files/adc1.h"<br><br>/*PID function and variable definitions*/<br>void PID(void);<br>int16_t n16_integrator_memory;<br>int16_t n16_reference;<br>int16_t n16_error;<br>int16_t n16_proportional;<br><br>#define target_voltage  3.3<br>#define reference       666.7*target_voltage + 17.6<br>#define p_gain          0.1<br>#define i_gain          0.05</code><br>The p_gain and i_gain values are the parameters that you can adjust to fine tune the gain loop response of the buck converter.</li>
 <li>Inside the int main(void), add the following codes after SYSTEM_Initialize();<code><br>// Initialize PWM to 100% duty cycle (Q6 is PMOS, 0=on)<br>PG7DC = PG7PER; // Fclk/Fpwm - 1, resolution - 1<br>//Initialize PID variables<br>n16_integrator_memory = 0;<br>n16_reference = (int16_t) reference;<br>//Assign PID Handler<br> ADC1_SetRC1_VOUTFBInterruptHandler(PID);</code></li>
 <li>After the int main(void) function, add the following code:<code><br>void PID(void)<br>{<br>  n16_error = n16_reference - ADCBUF1;<br>  n16_integrator_memory = n16_integrator_memory + i_gain*n16_error;<br>  n16_integrator_memory = n16_integrator_memory*(n16_integrator_memory&gt;0);<br>  n16_proportional = p_gain*n16_error;<br>  PG7DC = PG7PER - n16_integrator_memory - n16_proportional;<br>}</code></li>
 <li>The new main.c of the slave core should now look like below:<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/3/MPLAB_slave_code-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_slave_code-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_slave_code-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_slave_code-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_slave_code-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_slave_code-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_slave_code-2-2xl.jpg 1600w"  alt="MPLAB Slave Code" width="652" height="866"></figure></li>
@@ -129,7 +129,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/"/>
         <id>https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</id>
 
-        <updated>2021-08-14T21:37:21+08:00</updated>
+        <updated>2021-08-15T12:02:32+08:00</updated>
             <summary>
                 <![CDATA[
                     If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the TestBench.asc file in LTSPICE: integrator.zip Below left is the schematic on the TestBench.asc file and below right side should be the result of&hellip;

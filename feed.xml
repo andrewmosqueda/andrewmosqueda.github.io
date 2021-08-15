@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-15T17:26:45+08:00</updated>
+    <updated>2021-08-15T22:06:17+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -118,6 +118,119 @@
 <li>Below is my hardware setup to validate the result. I use ADALM2000 as oscilloscope.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/3/DSPIC33CH_hardware_setup.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH_hardware_setup-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH_hardware_setup-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH_hardware_setup-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH_hardware_setup-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH_hardware_setup-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH_hardware_setup-2xl.jpg 1600w"  alt="DSPIC33CH curiosity laboratory setup" width="1145" height="752"></figure></li>
 <li>Below is the waveform taken from the ADALM2000 oscilloscope:<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/3/DSPIC33CH-buck-waveform-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH-buck-waveform-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH-buck-waveform-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH-buck-waveform-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH-buck-waveform-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH-buck-waveform-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/DSPIC33CH-buck-waveform-2-2xl.jpg 1600w"  alt="Scopy Oscilloscope" width="1223" height="678"></figure>The mean of the output voltage is 3.22V, a little offset from the 3.3V target. It could be due to the tolerance of the sense resistors, opamp or ADC of the DSPIC IC. The reference in the source code can ba adjusted to compensate this offset. We can also see that the duty measured is 20.03%.</li>
 </ol>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Simulation of Buck Converter using discrete PID in LTSPICE</title>
+        <author>
+            <name>Andrew Mosqueda</name>
+        </author>
+        <link href="https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/"/>
+        <id>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</id>
+
+        <updated>2021-08-15T22:06:17+08:00</updated>
+            <summary>
+                <![CDATA[
+                    If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the buck.asc file in LTSPICE: Discrete PWM buck converter This article presents a LTSPICE simulation of a PWM buck converter controlled by a discrete&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the buck.asc file in LTSPICE:</p>
+<p><a href="https://andrewmosqueda.github.io/media/files/discrete_buck_converter.zip" target="_blank" rel="noopener noreferrer">Discrete PWM buck converter</a></p>
+<figure class="post__image">Below left is the schematic on the buck.asc file and below right should be the result of the LTSPICE simulation.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/discrete_buck_pwm.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-2xl.jpg 1600w"  alt="LTSPICE Digital PWM Buck Converter" width="1916" height="922"></figure>
+<h2>Introduction</h2>
+<p>This article presents a LTSPICE simulation of a PWM buck converter controlled by a discrete PID. The simulation result will be compared to the result of the actual implementation of a digitally controlled buck converter (<a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">Buck converter</a>). Below table is a comparison of the source code from the the actual implementation (DSPIC33 IC) and the components used in this LTSPICE simulation.</p>
+<table style="border-collapse: collapse; width: 98.8593%;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.2311%;"><strong>MPLAB (DSPIC33) Source Code</strong></td>
+<td style="width: 56.8252%;"><strong>LTSPICE component / parameter</strong></td>
+</tr>
+<tr>
+<td style="width: 49.2311%;">
+<p><span style="text-decoration: underline;">PARAMETERS</span></p>
+<p><span style="font-size: small;">#define target_voltage  3.3<br>#define reference       666.7*target_voltage + 17.6<br>#define p_gain          0.1<br>#define i_gain          0.05</span></p>
+</td>
+<td style="width: 56.8252%;">
+<p><span style="text-decoration: underline;">PARAMETERS</span></p>
+<p><span style="font-size: small;">.param target_voltage=3.3 p_gain=0.1 i_gain=0.05<br>.param reference=(666.7*target_voltage)+17.6</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.2311%;">
+<p><span style="text-decoration: underline;">ANALOG TO DIGITAL CONVERSION</span></p>
+<p><span style="font-size: small;">(use the default configuration of ADC)</span></p>
+</td>
+<td style="width: 56.8252%;">
+<p><span style="text-decoration: underline;">ANALOG TO DISCRETE CONVERSION</span></p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/ADC.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/ADC-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ADC-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ADC-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ADC-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ADC-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ADC-2xl.jpg 1600w"  alt="LTSPICE Analog to Digital Conversion" width="602" height="57"></figure>
+</td>
+</tr>
+<tr>
+<td style="width: 49.2311%;">
+<p><span style="text-decoration: underline;">ERROR CALCULATION</span></p>
+<p><span style="font-size: small;">n16_error = n16_reference - ADCBUF1;</span></p>
+</td>
+<td style="width: 56.8252%;">
+<p><span style="text-decoration: underline;">ERROR CALCULATION</span></p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/LTSPICE_error_calculation.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_error_calculation-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_error_calculation-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_error_calculation-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_error_calculation-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_error_calculation-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_error_calculation-2xl.jpg 1600w"  alt="LTSPICE Error calculation" width="602" height="57"></figure>
+</td>
+</tr>
+<tr>
+<td style="width: 49.2311%;">
+<p><span style="text-decoration: underline;">INTEGRATION</span></p>
+<p><span style="font-size: small;">n16_integrator_memory = n16_integrator_memory + <br> i_gain*n16_error;</span></p>
+</td>
+<td style="width: 56.8252%;">
+<p><span style="text-decoration: underline;">INTEGRATION</span></p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/LTSPICE_integration.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_integration-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_integration-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_integration-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_integration-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_integration-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_integration-2xl.jpg 1600w"  alt="LTSPICE Discrete Integrator" width="601" height="127"></figure>
+</td>
+</tr>
+<tr>
+<td style="width: 49.2311%;">
+<p><span style="text-decoration: underline;">PROPORTIONAL</span></p>
+<p><span style="font-size: small;">n16_proportional = p_gain*n16_error;</span></p>
+</td>
+<td style="width: 56.8252%;">
+<p><span style="text-decoration: underline;">PROPORTIONAL</span></p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/LTSPICE_proportional.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_proportional-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_proportional-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_proportional-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_proportional-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_proportional-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_proportional-2xl.jpg 1600w"  alt="LTSPICE proportional computation" width="602" height="53"></figure>
+</td>
+</tr>
+<tr>
+<td style="width: 49.2311%;">
+<p><span style="text-decoration: underline;">DUTY CYCLE</span></p>
+<p><span style="font-size: small;">PG7DC = PG7PER - n16_integrator_memory <br> - n16_proportional;</span></p>
+</td>
+<td style="width: 56.8252%;">
+<p><span style="text-decoration: underline;">DUTY CYCLE</span></p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/LTSPICE_duty_cycle.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_duty_cycle-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_duty_cycle-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_duty_cycle-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_duty_cycle-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_duty_cycle-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_duty_cycle-2xl.jpg 1600w"  alt="LTSPICE Duty Cycle" width="603" height="55"></figure>
+</td>
+</tr>
+<tr>
+<td style="width: 49.2311%;">
+<p><span style="text-decoration: underline;">PWM GENERATION</span></p>
+<p><span style="font-size: small;">Configured in MCC PWM7, pwm freq=40kHz,<br>master clock frequency=8MHz</span></p>
+</td>
+<td style="width: 56.8252%;">
+<p><span style="text-decoration: underline;">PWM GENERATION</span></p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/LTSPICE_pwm_setting.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_setting-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_setting-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_setting-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_setting-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_setting-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_setting-2xl.jpg 1600w"  alt="LTSPICE PWM Setting" width="400" height="47"></figure><br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/LTSPICE_pwm_generator.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_generator-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_generator-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_generator-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_generator-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_generator-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/LTSPICE_pwm_generator-2xl.jpg 1600w"  alt="LTSPICE PWM Generator" width="712" height="123"></figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note: I used the floor() function in LTSPICE to convert the values into discrete.</p>
+<p> </p>
+<h2>Result</h2>
+<p>Below is the resulting waveform from 9.68ms to 10ms of the simulation. We can see that the on time width measured is 3.34ms which is only 16.5% duty cycle. </p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/ltspice_pwm_waveform.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform-2xl.jpg 1600w"  alt="LTSPICE PWM waveform" width="943" height="603"></figure>
+<p>In the <a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">actual</a> implementation, the duty cycle measured by the oscilloscope was 20%. Most likely cause why the actual implementation has higher duty cycle is that the MOSFET used in the actual implementation has a higher turn on resistance (BSS308PE Rdson=130mΩ@4.5V). The MOSFET (IRF7210) I used in the LTSPICE simulation has a Rdson of only 5mΩ. I changed the MOSFET to part number FDC5614P which has a Rdson value of  105mΩ and run the simulation again, the result below is now similar to the actual implementation.</p>
+<figure class="post__image" ><img loading="lazy" src="https://andrewmosqueda.github.io/media/posts/2/ltspice_pwm_waveform2-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform2-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform2-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform2-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform2-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform2-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/ltspice_pwm_waveform2-2-2xl.jpg 1600w"  alt="LTSPICE PWM Buck Converter waveform" width="942" height="598">
+<figcaption >PWM on pulse width increased with higher Rdson</figcaption>
+</figure>
+<h2>Conclusion</h2>
+<p>It was demonstrated that discrete control of PWM can be simulated in LTSPICE that can generate similar result with an actual implementation. It is better if we use the right part model. For example, the Rdson has a big impact on the duty cycle.</p>
             ]]>
         </content>
     </entry>

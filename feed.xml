@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-15T22:06:17+08:00</updated>
+    <updated>2021-08-15T22:08:49+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -129,7 +129,7 @@
         <link href="https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/"/>
         <id>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</id>
 
-        <updated>2021-08-15T22:06:17+08:00</updated>
+        <updated>2021-08-15T22:08:49+08:00</updated>
             <summary>
                 <![CDATA[
                     If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the buck.asc file in LTSPICE: Discrete PWM buck converter This article presents a LTSPICE simulation of a PWM buck converter controlled by a discrete&hellip;

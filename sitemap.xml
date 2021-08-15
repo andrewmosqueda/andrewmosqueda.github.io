@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-15T14:44:22+08:00</lastmod>
+<lastmod>2021-08-15T17:26:45+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>
@@ -108,8 +108,8 @@
 <image:title><![CDATA[MPLAB master source]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_slave_code-2.jpg</image:loc>
-<image:title><![CDATA[MPLAB Slave Code]]></image:title>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_slave_code.jpg</image:loc>
+<image:title><![CDATA[MPLAB Slave PWM Source Code]]></image:title>
 </image:image>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_program_button.jpg</image:loc>
@@ -124,8 +124,8 @@
 <image:title><![CDATA[DSPIC33CH curiosity laboratory setup]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://andrewmosqueda.github.io/media\posts\3/DSPIC33CH-buck-waveform.jpg</image:loc>
-<image:title><![CDATA[DS{IC33CH ADALM2000 buck pwm waveform]]></image:title>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/DSPIC33CH-buck-waveform-2.jpg</image:loc>
+<image:title><![CDATA[Scopy Oscilloscope]]></image:title>
 </image:image>
 </url>
 <url>
@@ -146,6 +146,46 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>
-<lastmod>2021-08-14T21:37:31+08:00</lastmod>
+<lastmod>2021-08-15T22:04:18+08:00</lastmod>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/discrete_buck_pwm.jpg</image:loc>
+<image:title><![CDATA[LTSPICE Digital PWM Buck Converter]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/ADC.jpg</image:loc>
+<image:title><![CDATA[LTSPICE Analog to Digital Conversion]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/LTSPICE_error_calculation.jpg</image:loc>
+<image:title><![CDATA[LTSPICE Error calculation]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/LTSPICE_integration.jpg</image:loc>
+<image:title><![CDATA[LTSPICE Discrete Integrator]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/LTSPICE_proportional.jpg</image:loc>
+<image:title><![CDATA[LTSPICE proportional computation]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/LTSPICE_duty_cycle.jpg</image:loc>
+<image:title><![CDATA[LTSPICE Duty Cycle]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/LTSPICE_pwm_setting.jpg</image:loc>
+<image:title><![CDATA[LTSPICE PWM Setting]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/LTSPICE_pwm_generator.jpg</image:loc>
+<image:title><![CDATA[LTSPICE PWM Generator]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/ltspice_pwm_waveform.jpg</image:loc>
+<image:title><![CDATA[LTSPICE PWM waveform]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\2/ltspice_pwm_waveform2-2.jpg</image:loc>
+<image:title><![CDATA[LTSPICE PWM Buck Converter waveform]]></image:title>
+</image:image>
 </url>
 </urlset>

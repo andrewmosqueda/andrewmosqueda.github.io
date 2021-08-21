@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-21T10:21:36+08:00</updated>
+    <updated>2021-08-21T10:28:52+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-08-21T10:21:36+08:00</updated>
+        <updated>2021-08-21T10:28:52+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -93,19 +93,19 @@
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxPER</td>
-<td style="width: 76.1398%;">PWM Generator x (generator number) Period. The PWM counter counts from 0 up to the value of this SFR.</td>
+<td style="width: 76.1398%;">PWM Generator x (generator number) Period. The PWM<br>counter counts from 0 up to the value of this SFR.</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxDC</td>
-<td style="width: 76.1398%;">PWM Generator x (generator number) Duty Cycle. The PWM generator output changes to 0 when the counter is equal to the value of this SFR. This value is calculated as the value on "PWM Input Clock Selection" (8MHz) divided by the value on "Requested Frequency" (40kHz) less 1 and is equal to 199 (0xC7).</td>
+<td style="width: 76.1398%;">PWM Generator x (generator number) Duty Cycle. The PWM<br>generator output changes to 0 when the counter is equal to the value of this SFR. This value is calculated as the value on "PWM Input Clock Selection" (8MHz) divided by the value on "Requested Frequency" (40kHz) less 1 and is equal to 199 (0xC7).</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxPHASE</td>
-<td style="width: 76.1398%;">PWM Generator x (generator number) Phase or deadtime.<br>The output of the PWM generator starts from 0 when counter value is 0 and changes to 1 when the counter value is equal to the value of this SFR.</td>
+<td style="width: 76.1398%;">PWM Generator x (generator number) Phase or deadtime.<br>The output of the PWM generator starts from 0 when counter<br>value is 0 and changes to 1 when the counter value is equal to the value of this SFR.</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PWMx</td>
-<td style="width: 76.1398%;">Pulse Width Modulation x (generator number) output. PWMx = 1 if Counter&gt;=PGxPHASE &amp; Counter &lt;= PGxDC else 0.</td>
+<td style="width: 76.1398%;">Pulse Width Modulation x (generator number) output. PWMx<br>= 1 if Counter&gt;=PGxPHASE &amp; Counter &lt;= PGxDC else 0.</td>
 </tr>
 </tbody>
 </table>

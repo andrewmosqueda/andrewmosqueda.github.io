@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-21T10:35:50+08:00</updated>
+    <updated>2021-08-21T11:12:48+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-08-21T10:35:50+08:00</updated>
+        <updated>2021-08-21T11:12:48+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -105,7 +105,7 @@
 </tr>
 <tr>
 <td style="width: 23.8602%;">PWMx</td>
-<td style="width: 81.8165%;">Pulse Width Modulation x (generator number) output. PWMx<br>= 1 if Counter&gt;=PGxPHASE &amp; Counter &lt;= PGxDC else 0.</td>
+<td style="width: 81.8165%;">Pulse Width Modulation x (generator number) output. PWMx<br>= 1 if Counter&gt;=PGxPHASE &amp; Counter &lt;= PGxDC else 0. For the dsPIC33 IC that we are using, this output is connected to<br>the RC14 pin.</td>
 </tr>
 </tbody>
 </table>

@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-21T10:32:13+08:00</updated>
+    <updated>2021-08-21T10:35:50+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-08-21T10:32:13+08:00</updated>
+        <updated>2021-08-21T10:35:50+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -77,35 +77,35 @@
 <li>In the Device Resources Pane, click the + on PWM. The PWM will appear on the Project Resources Pane afterwards.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/3/MPLAB_device_resources_PWM.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_device_resources_PWM-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_device_resources_PWM-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_device_resources_PWM-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_device_resources_PWM-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_device_resources_PWM-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_device_resources_PWM-2xl.jpg 1600w"  alt="MPLAB device resources PWM" width="462" height="292"></figure></li>
 <li>In the PWM Pane, Select PWM Generator 7, rename to PWM_BUCK, enable PWM Generator and change PWM Output Mode to Independent. Note that we can only use Generator 7 because it is the one connected to RC14 and RC15 PWM output.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/3/MPLAB_PWM_generator_setting-3.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_generator_setting-3-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_generator_setting-3-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_generator_setting-3-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_generator_setting-3-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_generator_setting-3-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_generator_setting-3-2xl.jpg 1600w"  alt="MPLAB PWM Generator Settings" width="927" height="295"></figure></li>
 <li>Change the Requested Frequency to 40KHz.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/3/MPLAB_PWM_frequency_setting.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_frequency_setting-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_frequency_setting-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_frequency_setting-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_frequency_setting-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_frequency_setting-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/MPLAB_PWM_frequency_setting-2xl.jpg 1600w"  alt="MPLAB PWM frequency setting" width="853" height="287"></figure><br>Below is the relationship of the Special Function Registers (SFR) to the Independent Edge PWM generator from the dsPIC33/PIC24 FRM High-Resolution PWM with Fine Edge Placement document.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/3/dsPIC33_PIC24-Independent-Edge-PWM-SFR.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/3/responsive/dsPIC33_PIC24-Independent-Edge-PWM-SFR-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/3/responsive/dsPIC33_PIC24-Independent-Edge-PWM-SFR-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/3/responsive/dsPIC33_PIC24-Independent-Edge-PWM-SFR-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/3/responsive/dsPIC33_PIC24-Independent-Edge-PWM-SFR-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/3/responsive/dsPIC33_PIC24-Independent-Edge-PWM-SFR-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/3/responsive/dsPIC33_PIC24-Independent-Edge-PWM-SFR-2xl.jpg 1600w"  alt="dsPIC33_PIC24 Independent Edge PWM Special Function Register (FSR)" width="372" height="272"></figure><br>Below table defines these SFRs and abbreviations according to my understanding.<br>
-<table style="border-collapse: collapse; width: 104.015%;" border="1">
+<table style="border-collapse: collapse; width: 105.597%;" border="1">
 <tbody>
 <tr>
 <td style="width: 23.8602%;">Abbreviation</td>
-<td style="width: 80.2083%;">Definition</td>
+<td style="width: 81.8165%;">Definition</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">SOC</td>
-<td style="width: 80.2083%;">Start Of Counter</td>
+<td style="width: 81.8165%;">Start Of Counter</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">EOC</td>
-<td style="width: 80.2083%;">End Of Counter</td>
+<td style="width: 81.8165%;">End Of Counter</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxPER</td>
-<td style="width: 80.2083%;">PWM Generator x (generator number) Period. The PWM<br>counter counts from 0 up to the value of this SFR.</td>
+<td style="width: 81.8165%;">PWM Generator x (generator number) Period. The PWM<br>counter counts from 0 up to the value of this SFR.</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxDC</td>
-<td style="width: 80.2083%;">PWM Generator x (generator number) Duty Cycle. The PWM<br>generator output changes to 0 when the counter is equal to<br>the value of this SFR. This value is calculated as the value on<br>"PWM Input Clock Selection" (8MHz) divided by the value on<br>"Requested Frequency" (40kHz) less 1 and is equal to 199 (0xC7).</td>
+<td style="width: 81.8165%;">PWM Generator x (generator number) Duty Cycle. The PWM<br>generator output changes to 0 when the counter is equal to<br>the value of this SFR. This value is calculated as the value on<br>"PWM Input Clock Selection" (8MHz) divided by the value on<br>"Requested Frequency" (40kHz) less 1 and is equal to 199 <br>(0xC7).</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxPHASE</td>
-<td style="width: 80.2083%;">PWM Generator x (generator number) Phase or deadtime.<br>The output of the PWM generator starts from 0 when counter<br>value is 0 and changes to 1 when the counter value is equal to the value of this SFR.</td>
+<td style="width: 81.8165%;">PWM Generator x (generator number) Phase or deadtime.<br>The output of the PWM generator starts from 0 when counter<br>value is 0 and changes to 1 when the counter value is equal to<br>the value of this SFR.</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PWMx</td>
-<td style="width: 80.2083%;">Pulse Width Modulation x (generator number) output. PWMx<br>= 1 if Counter&gt;=PGxPHASE &amp; Counter &lt;= PGxDC else 0.</td>
+<td style="width: 81.8165%;">Pulse Width Modulation x (generator number) output. PWMx<br>= 1 if Counter&gt;=PGxPHASE &amp; Counter &lt;= PGxDC else 0.</td>
 </tr>
 </tbody>
 </table>

@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-21T11:25:47+08:00</updated>
+    <updated>2021-08-21T11:28:04+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-08-21T11:25:47+08:00</updated>
+        <updated>2021-08-21T11:28:04+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -93,7 +93,7 @@
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxPER</td>
-<td style="width: 81.8165%;">PWM Generator x (generator number) Period. The PWM<br>counter counts from 0 up to the value of this SFR. This value is calculated as the value on "PWM Input Clock Selection"(8MHz) divided by the value on "Requested Frequency" (40kHz) less 1 and is equal to 199 (0xC7).</td>
+<td style="width: 81.8165%;">PWM Generator x (generator number) Period. The PWM<br>counter counts from 0 up to the value of this SFR. This value is<br>calculated as the value on "PWM Input Clock Selection"<br>(8MHz) divided by the value on "Requested Frequency"<br>(40kHz) less 1 and is equal to 199 (0xC7).</td>
 </tr>
 <tr>
 <td style="width: 23.8602%;">PGxDC</td>

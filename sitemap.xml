@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-25T20:24:31+08:00</lastmod>
+<lastmod>2021-08-25T21:00:05+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/BuckBoost_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330038 DSPIC33CH Curiosity Development Board Buck Boost Circuit]]></image:title>
@@ -58,6 +58,10 @@
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB-clock-output-pin-configuration.jpg</image:loc>
 <image:title><![CDATA[MPLAB MCC Master Clock Output Pin Configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/Load-Master-Settings.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC Load Master Settings]]></image:title>
 </image:image>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_device_resources_PWM.jpg</image:loc>
@@ -134,7 +138,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-25T19:45:51+08:00</lastmod>
+<lastmod>2021-08-25T20:33:52+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>

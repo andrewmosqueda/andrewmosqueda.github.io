@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-21T11:24:10+08:00</lastmod>
+<lastmod>2021-08-25T19:42:21+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/BuckBoost_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330038 DSPIC33CH Curiosity Development Board Buck Boost Circuit]]></image:title>
@@ -75,10 +75,58 @@
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/dsPIC33_PIC24-dual-independent-PWM-SFR.jpg</image:loc>
 <image:title><![CDATA[dsPIC33/PIC24 dual independent output PWM SFR]]></image:title>
 </image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_PWM_ADCtrigger_setting.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PWM ADC Trigger Configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_PWM_DataUpdate_setting.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PWM Update Trigger Configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_device_resources_ADC.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC Device Resources ADC1]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_ADC_SelectedChannels_setting.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC ADC Configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_Slave_Pin_Module.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC Pin Module Configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_MCC_Notifications.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC Slave notifications]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_add_secondary_project.jpg</image:loc>
+<image:title><![CDATA[MPLAB Add Secondary Project]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_add_slavex.jpg</image:loc>
+<image:title><![CDATA[MPLAB Add Secondary Project dialog ]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_master_code.jpg</image:loc>
+<image:title><![CDATA[MPLAB Master Core Source Code]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/DSPIC33-boost-converter-source-code-2.jpg</image:loc>
+<image:title><![CDATA[MPLAB DSPIC33CH Boost Converter Source Code]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_program_button.jpg</image:loc>
+<image:title><![CDATA[MPLAB program button]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_programming_complete.jpg</image:loc>
+<image:title><![CDATA[MPLAB Starter Kit on Board]]></image:title>
+</image:image>
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-21T11:28:04+08:00</lastmod>
+<lastmod>2021-08-25T19:45:51+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>
@@ -196,8 +244,8 @@
 <image:title><![CDATA[MPLAB Programming Complete]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://andrewmosqueda.github.io/media\posts\3/DSPIC33CH_hardware_setup.jpg</image:loc>
-<image:title><![CDATA[DSPIC33CH curiosity laboratory setup]]></image:title>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/DSPIC33CH_hardware_setup-2.jpg</image:loc>
+<image:title><![CDATA[DM330028 dsPIC33CH Buck Converter with ADALM2000 oscilloscope]]></image:title>
 </image:image>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/DSPIC33CH-buck-waveform-2.jpg</image:loc>

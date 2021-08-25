@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-25T19:42:21+08:00</lastmod>
+<lastmod>2021-08-25T20:24:31+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/BuckBoost_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330038 DSPIC33CH Curiosity Development Board Buck Boost Circuit]]></image:title>
@@ -122,6 +122,14 @@
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/MPLAB_programming_complete.jpg</image:loc>
 <image:title><![CDATA[MPLAB Starter Kit on Board]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/DM330028-with-ADALM2000.jpg</image:loc>
+<image:title><![CDATA[DM330028 dsPIC33CH Curiosity with ADALM2000]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\4/ADALM2000-oscilloscope.jpg</image:loc>
+<image:title><![CDATA[ADALM2000 oscilloscope]]></image:title>
 </image:image>
 </url>
 <url>

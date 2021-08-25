@@ -5,8 +5,12 @@
 <loc>https://andrewmosqueda.github.io/</loc>
 </url>
 <url>
+<loc>https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/</loc>
+<lastmod>2021-08-25T21:57:12+08:00</lastmod>
+</url>
+<url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-25T21:00:05+08:00</lastmod>
+<lastmod>2021-08-25T21:02:35+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/BuckBoost_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330038 DSPIC33CH Curiosity Development Board Buck Boost Circuit]]></image:title>
@@ -282,7 +286,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>
-<lastmod>2021-08-15T22:08:49+08:00</lastmod>
+<lastmod>2021-08-25T21:41:15+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\2/discrete_buck_pwm.jpg</image:loc>
 <image:title><![CDATA[LTSPICE Digital PWM Buck Converter]]></image:title>

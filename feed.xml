@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-27T23:41:37+08:00</updated>
+    <updated>2021-08-28T09:10:17+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/"/>
         <id>https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/</id>
 
-        <updated>2021-08-27T23:41:37+08:00</updated>
+        <updated>2021-08-28T09:10:17+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction This is a tutorial on how to monitor the variables of a dsPIC33CH program in real time specifically on the DM330028 dsPIC33CH Curiosity Development Board using UART and switch Interrupt in MPLAB and MCC. The UART and switch Interrupts will be added to a&hellip;
@@ -71,12 +71,13 @@
 </ol>
 <h2>RESULT</h2>
 <ol>
-<li>Connect J20 of the DM330028 dsPIC33CH Curiosity Development Board to the PC.</li>
+<li>Make sure J13 (VFB Gain) of the DM330028 dsPIC33CH Curiosity Development Board is shorted.</li>
+<li>Connect J20 of the Board to the PC.</li>
 <li>Set the master project as the main project.</li>
 <li>Click the program button <figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/5/MPLAB_program_button.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB_program_button-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB_program_button-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB_program_button-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB_program_button-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB_program_button-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB_program_button-2xl.jpg 1600w"  alt="MPLAB program button" width="56" height="40"></figure>on the MPLAB toolbar.</li>
 <li>Connect J16 of the DM330028 dsPIC33CH Curiosity Development Board to the PC. This connection will be used for UART communication.</li>
 <li>Run a terminal emulator program and connect to the UART. I use the CoolTerm program.</li>
-<li>After pressing RE7 thrice, I got the result as shown below. I found the error is far from zero which I need to investigate.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/5/CoolTerm.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-2xl.jpg 1600w"  alt="dsPIC33CH printf debugging UART CoolTerm" width="861" height="392"></figure></li>
+<li>After pressing RE7 thrice, I got the result as shown below. <br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/5/CoolTerm-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/5/responsive/CoolTerm-2-2xl.jpg 1600w"  alt="CoolTerm" width="861" height="388"></figure></li>
 </ol>
 <p> </p>
             ]]>

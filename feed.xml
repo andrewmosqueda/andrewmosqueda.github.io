@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-08-28T09:10:17+08:00</updated>
+    <updated>2021-09-11T10:15:08+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/"/>
         <id>https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/</id>
 
-        <updated>2021-08-28T09:10:17+08:00</updated>
+        <updated>2021-09-11T10:15:08+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction This is a tutorial on how to monitor the variables of a dsPIC33CH program in real time specifically on the DM330028 dsPIC33CH Curiosity Development Board using UART and switch Interrupt in MPLAB and MCC. The UART and switch Interrupts will be added to a&hellip;
@@ -64,7 +64,7 @@
 <li>Append the following after the #include "mcc_generated_files/adc1.h" line:<br><code>#include "mcc_generated_files/uart1.h"</code></li>
 <li>Append the following after the void PID(void); line:<br><code>void mySw(void);</code><br>This is the declaration of the new program routine that will send UART data every time the switch on RE7 pin is pressed.</li>
 <li>I will monitor the reference, actual and error variables in this exercise. <strong>Modify </strong>the lines int16_t n16_reference; and  int16_t n16_error; to:<br><code>volatile int16_t n16_reference;<br>volatile int16_t n16_error;</code><br>Adding volatile before the declaration of a variable is a must if that variable is to be accessed by different program routines.</li>
-<li>Open the pin_manager.c file of the slave project and check if the Interrupt on Change: negative is 0 (MCC bug) as shown below. <br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/5/MPLAB-MCC-pin-manager-bug.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-2xl.jpg 1600w"  alt="MPLAB MCC pin manager interrupt config bug" width="540" height="202"></figure><br>If it is 0, then append the following code after the SYSTEM_Initialize(); line in the main.c file:<br><code>CNEN1Ebits.CNEN1E7 = 1;</code><br>I don't know why MCC sometimes does not configure this correctly even If change the IOC settings in MCC (SLAVE CORE CONFIGURATION step 9).</li>
+<li>Open the pin_manager.c file of the slave project and check if the Interrupt on Change: negative is 0 (MCC bug) as shown below. <br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/5/MPLAB-MCC-pin-manager-bug.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/5/responsive/MPLAB-MCC-pin-manager-bug-2xl.jpg 1600w"  alt="MPLAB MCC pin manager interrupt config bug" width="540" height="202"></figure><br>If it is 0, then append the following code after the SYSTEM_Initialize(); line in the main.c file:<br><code>CNEN1Ebits.CNEN1E7 = 1;</code><br>I don't know why MCC sometimes does not configure this correctly even if the IOC settings in MCC (SLAVE CORE CONFIGURATION step 9) is configured correctly.</li>
 <li>Append the following after the ADC1_SetRC1_VOUTFBInterruptHandler(PID); line:<br><code>RE7_S1_SetInterruptHandler(mySw);</code></li>
 <li>Append the following after the void PID(void) program routine:<br><code>void mySw(void)<br>{<br>    printf("n16_error=%d n16_reference=%d ADCBUF1=%d\n",\<br>        n16_error, n16_reference, ADCBUF1);<br>}</code></li>
 <li>The modified code should now look like below:<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/5/modified-code.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/5/responsive/modified-code-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/5/responsive/modified-code-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/5/responsive/modified-code-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/5/responsive/modified-code-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/5/responsive/modified-code-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/5/responsive/modified-code-2xl.jpg 1600w"  alt="MPLAB UART code" width="592" height="922"></figure></li>
@@ -91,7 +91,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-08-25T21:02:35+08:00</updated>
+        <updated>2021-08-28T09:46:22+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -388,7 +388,7 @@ The initialization of these SFRs will be automatically defined later on a pwm.c 
         <link href="https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/"/>
         <id>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</id>
 
-        <updated>2021-08-25T21:41:15+08:00</updated>
+        <updated>2021-08-28T09:23:25+08:00</updated>
             <summary>
                 <![CDATA[
                     If you are in a hurry and want to immediately verify the simulation, download and unzipped the file below then run the buck.asc file in LTSPICE: Discrete PWM buck converter This article presents a LTSPICE simulation of a PWM buck converter controlled by a discrete&hellip;

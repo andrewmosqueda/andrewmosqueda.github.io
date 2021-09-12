@@ -202,7 +202,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-08-25T20:33:52+08:00</lastmod>
+<lastmod>2021-09-12T10:33:21+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>
@@ -280,6 +280,10 @@
 <image:title><![CDATA[MPLAB PWM Data Update Settings]]></image:title>
 </image:image>
 <image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/PG7IOCONH.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC Active low PWM]]></image:title>
+</image:image>
+<image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_device_resources_ADC.jpg</image:loc>
 <image:title><![CDATA[MPLAB Device Resources ADC]]></image:title>
 </image:image>
@@ -308,8 +312,8 @@
 <image:title><![CDATA[MPLAB master source]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_slave_code.jpg</image:loc>
-<image:title><![CDATA[MPLAB Slave PWM Source Code]]></image:title>
+<image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_slave_code-2.jpg</image:loc>
+<image:title><![CDATA[MPLAB PID Code]]></image:title>
 </image:image>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/MPLAB_program_button.jpg</image:loc>

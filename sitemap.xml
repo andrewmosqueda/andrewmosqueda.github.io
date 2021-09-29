@@ -6,7 +6,87 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/current-mode/</loc>
-<lastmod>2021-09-11T21:52:04+08:00</lastmod>
+<lastmod>2021-09-29T21:52:19+08:00</lastmod>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/close-loop-2.jpg</image:loc>
+<image:title><![CDATA[Current Mode Buck Converter]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/current-sense-resistors.jpg</image:loc>
+<image:title><![CDATA[DM330028 Current Sense Resistors]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/current-sense-circuit-2.jpg</image:loc>
+<image:title><![CDATA[High side current sense amplifier]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/Comparator.jpg</image:loc>
+<image:title><![CDATA[DSPIC33 High Speed Comparator Module]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/pci.jpg</image:loc>
+<image:title><![CDATA[PCI Function Block Diagram]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/PCI-acceptance-logic-latched-mode.jpg</image:loc>
+<image:title><![CDATA[PCI Acceptance Logic in Latched Mode]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/projects.PNG</image:loc>
+<image:title><![CDATA[MPLAB Projects pane]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/Pin-Manager-RB2-DACout-slave-owned.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC Pin Manager]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/system-module.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC System Module Settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/Comparator-Settings.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC CMP1 settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/S1CMP1A.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC Pin Manager]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/PWM-duty-cycle.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PWM duty cycle settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/PG7CLPCIH.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PG7CLPCIH Settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/PG7CLPCIL.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PG7CLPCIL]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/PG7IOCONH.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PG7IOCONH Settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/PG7LEBH-2.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PG7LEBH Register]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/PG7LEBL.jpg</image:loc>
+<image:title><![CDATA[MPLAB MCC PGxLEBL]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/RA3vsRB2-2.jpg</image:loc>
+<image:title><![CDATA[Sensed Current and DAC waveform]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/RA3vsRC14-2.jpg</image:loc>
+<image:title><![CDATA[Current Sense and PWM7H waveform]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\6/RA3vsVout.jpg</image:loc>
+<image:title><![CDATA[Current Sense Voltage and Converter Output Voltage]]></image:title>
+</image:image>
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/</loc>
@@ -66,6 +146,26 @@
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\5/CoolTerm-2.jpg</image:loc>
 <image:title><![CDATA[CoolTerm]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://andrewmosqueda.github.io/high-side-current-sense-circuit-simulation/</loc>
+<lastmod>2021-09-29T21:49:18+08:00</lastmod>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\7/current-sense-resistors.jpg</image:loc>
+<image:title><![CDATA[High Side Current Sense Resistors]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\7/current-sense-circuit.jpg</image:loc>
+<image:title><![CDATA[Level Shifter]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\7/high-side-current-sense-simulation-circuit.jpg</image:loc>
+<image:title><![CDATA[High Side Current Sense Simulation Circuit]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\7/high-side-current-sense-simulation-result.jpg</image:loc>
+<image:title><![CDATA[High side current sense simulation result]]></image:title>
 </image:image>
 </url>
 <url>
@@ -202,7 +302,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-09-12T10:33:21+08:00</lastmod>
+<lastmod>2021-09-29T21:43:37+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>
@@ -350,7 +450,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>
-<lastmod>2021-08-28T09:23:25+08:00</lastmod>
+<lastmod>2021-09-26T09:22:31+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\2/discrete_buck_pwm.jpg</image:loc>
 <image:title><![CDATA[LTSPICE Digital PWM Buck Converter]]></image:title>
@@ -390,6 +490,30 @@
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\2/ltspice_pwm_waveform2-2.jpg</image:loc>
 <image:title><![CDATA[LTSPICE PWM Buck Converter waveform]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/</loc>
+<lastmod>2021-09-29T21:48:19+08:00</lastmod>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\8/close-loop.jpg</image:loc>
+<image:title><![CDATA[Buck Converter with dsPIC33CH]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\8/pci.jpg</image:loc>
+<image:title><![CDATA[PWM Control Input Logic]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\8/PCI-CL-Simplified.jpg</image:loc>
+<image:title><![CDATA[PCI Current Limit Logic Simplified Diagram]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\8/PCI-CL-Simulation-2.jpg</image:loc>
+<image:title><![CDATA[DSPIC33 PCI Current Limit Simulation LTSPICE]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\8/waveforms-2.jpg</image:loc>
+<image:title><![CDATA[DSPIC33 PCI Current Limit Simulation]]></image:title>
 </image:image>
 </url>
 </urlset>

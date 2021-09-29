@@ -3,12 +3,242 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-09-12T10:33:21+08:00</updated>
+    <updated>2021-09-29T21:52:19+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
     <id>https://andrewmosqueda.github.io</id>
 
+    <entry>
+        <title>Simulation of the PCI-Current Limit Logic of dsPIC33CH</title>
+        <author>
+            <name>Andrew Mosqueda</name>
+        </author>
+        <link href="https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/"/>
+        <id>https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/</id>
+
+        <updated>2021-09-29T21:48:19+08:00</updated>
+            <summary>
+                <![CDATA[
+                    INTRODUCTION The dsPIC33CH IC has a PCI CL (PWM Control Input-Current Limit) Logic that is use for Current Mode Controlled Converter. An equivalent circuit in LTSPICE is simulated to gain better insights of this logic system. The simulated circuit is based on actual circuit values&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>INTRODUCTION</h2>
+<p>The dsPIC33CH IC has a PCI CL (PWM Control Input-Current Limit) Logic that is use for Current Mode Controlled Converter. An equivalent circuit in LTSPICE is simulated to gain better insights of this logic system. The simulated circuit is based on actual circuit values in the DM330038 dsPIC33CH Curiosity Development Board.</p>
+<p>SIMPLIFIED BUCK CONVERTER SCHEMATIC</p>
+<figure class="post__image">Below is a simplified schematic of the current mode controlled buck converter of the board with connection to the dsPIC33CH IC. The PWM duty cycle is fixed at usually 95%. the PCI CL purpose is to override (block or truncate) the PWM output everytime the output of the current sense circuit exceeds the reference value. The reference value is an analog voltage generated from the PID by a DAC.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/8/close-loop.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-2xl.jpg 1600w"  alt="Buck Converter with dsPIC33CH" width="983" height="578"></figure>
+<p>From above figure, we can see that the PCI-CL is part of the PWM Module of the IC.</p>
+<p>PCI DIAGRAM</p>
+<figure class="post__image">Below is the diagram of the PCI from DS70005320B document. <br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/8/pci.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/8/responsive/pci-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/8/responsive/pci-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/8/responsive/pci-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/8/responsive/pci-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/8/responsive/pci-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/8/responsive/pci-2xl.jpg 1600w"  alt="PWM Control Input Logic" width="933" height="656"></figure>
+<p>The table below are the register values from above diagram that are needed to configure in order for the PCI to become a current limit logic for the current mode converter:</p>
+<table style="border-collapse: collapse; width: 73.5462%;" border="1">
+<tbody>
+<tr>
+<td style="width: 19.3732%;"><strong>Register</strong></td>
+<td style="width: 10.9378%;"><strong>Hex Value</strong></td>
+<td style="width: 56.2236%;"><strong>Value Definition</strong></td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">PSS</td>
+<td style="width: 10.9378%;">28</td>
+<td style="width: 56.2236%;">Slave 1 Comparator 1 output</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">PPS</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">Not inverted</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">PSYNC</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">disabled</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">AQSS</td>
+<td style="width: 10.9378%;">2</td>
+<td style="width: 56.2236%;">LEB is Active</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">AQPS</td>
+<td style="width: 10.9378%;">1</td>
+<td style="width: 56.2236%;">Inverted</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">TERM</td>
+<td style="width: 10.9378%;">1</td>
+<td style="width: 56.2236%;">Auto-Terminate</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">SWTERM</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">disabled</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">TSYNCDIS</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">PWM EOC</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">TQSS</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">No Termination Qualifier, Force 1</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">TQPS</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">Not inverted</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">ACP</td>
+<td style="width: 10.9378%;">3</td>
+<td style="width: 56.2236%;">Latched</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">BPEN</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">disabled</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">SWPCI</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">Drives '0'</td>
+</tr>
+<tr>
+<td style="width: 19.3732%;">SWPCIM</td>
+<td style="width: 10.9378%;">0</td>
+<td style="width: 56.2236%;">PCI acceptance logic</td>
+</tr>
+</tbody>
+</table>
+<p>By using the values of the registers in the above table. The PCI logic is simplified to the diagram below.</p>
+<figure class="post__image" ><br><img loading="lazy" src="https://andrewmosqueda.github.io/media/posts/8/PCI-CL-Simplified.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simplified-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simplified-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simplified-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simplified-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simplified-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simplified-2xl.jpg 1600w"  alt="PCI Current Limit Logic Simplified Diagram" width="907" height="256">
+<figcaption >PCI Current Limit Simplified Diagram</figcaption>
+</figure>
+<p>The Leading Edge Blanking (LEB) is a counter circuit that is synchronized with the PWM output and becomes Active after the PWM output becomes high and then resets/stop after the PWM becomes low. The purpose of the LEB is to ignore switching transients. </p>
+<p>The Auto-Terminate is a logic circuit that detects falling signal of the comparator output and is reset every start of PWM cycle.</p>
+<p>LTSPICE SIMULATION CIRCUIT</p>
+<figure class="post__image">Below is the LTSPICE schematic for the simulation of this simplfied current limit logic with the comparator, pwm and power circuit. The Analog Comparator Reference is fixed at 0.75 for debugging purposes. The ADC and PID are not included in this simulation for simplicity. The LEB is replaced by a DFLOP instead of a counter for shorter simulation time. The output POLARITY is inverted because Power MOSFET Q6 needs 0V to turn on.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/8/PCI-CL-Simulation-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simulation-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simulation-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simulation-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simulation-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simulation-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/8/responsive/PCI-CL-Simulation-2-2xl.jpg 1600w"  alt="DSPIC33 PCI Current Limit Simulation LTSPICE" width="942" height="776"></figure>
+<p>LTSPICE SIMULATION RESULT</p>
+<figure class="post__image">Below are some of the waveforms from the result of the simulation. The first plot pane from the top shows the PWM output running at 95% duty cycle. The 2nd plot pane from the top shows PCI_Active signal which blocks the PWM output. The truncated output PWM7H is shown in the third plot from the top. The red waveform Ix(Q6:S) is the current flow in power MOSFET Q6. The 4th plot from the top shows the momentary pulse from the comparator output PCI_SOURCE when the sense current RA3_ISENSEH reached the reference voltage DAC.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/8/waveforms-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/8/responsive/waveforms-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/8/responsive/waveforms-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/8/responsive/waveforms-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/8/responsive/waveforms-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/8/responsive/waveforms-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/8/responsive/waveforms-2-2xl.jpg 1600w"  alt="DSPIC33 PCI Current Limit Simulation" width="935" height="877"></figure>
+<p> </p>
+<p>LTSPICE Simulation Files: <a href="https://andrewmosqueda.github.io/media/files/DSPIC33 PCI Current Limit Simulation.zip" target="_blank" rel="noopener noreferrer">DSPIC33 PCI Current Limit Simulation LTSPICE</a></p>
+<p> </p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>High Side Current Sense Circuit Simulation</title>
+        <author>
+            <name>Andrew Mosqueda</name>
+        </author>
+        <link href="https://andrewmosqueda.github.io/high-side-current-sense-circuit-simulation/"/>
+        <id>https://andrewmosqueda.github.io/high-side-current-sense-circuit-simulation/</id>
+
+        <updated>2021-09-29T21:49:18+08:00</updated>
+            <summary>
+                <![CDATA[
+                    LTSPICE simulation files: High Side Current Sense LTSPICE simulation Mathcad files: High Side Current Sense Calculations The high side current sense circuit of DM330028 dsPIC33CH Curiosity Development board as shown below is simulated in LTSPICE and results are shown after. I also included a mathcad calculation&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>LTSPICE simulation files: <a href="https://andrewmosqueda.github.io/media/files/high_side_current_sense.zip" target="_blank" rel="noopener noreferrer">High Side Current Sense LTSPICE simulation</a></p>
+<p>Mathcad files: <a href="https://andrewmosqueda.github.io/media/files/High Side Current Measurement.mcdx" target="_blank" rel="noopener noreferrer">High Side Current Sense Calculations</a></p>
+<h2>INTRODUCTION</h2>
+<p>The high side current sense circuit of DM330028 dsPIC33CH Curiosity Development board as shown below is simulated in LTSPICE and results are shown after. I also included a mathcad calculation file to quickly verify the results.</p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/7/current-sense-resistors.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-resistors-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-resistors-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-resistors-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-resistors-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-resistors-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-resistors-2xl.jpg 1600w"  alt="High Side Current Sense Resistors" width="406" height="207"></figure><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/7/current-sense-circuit.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-circuit-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-circuit-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-circuit-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-circuit-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-circuit-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/7/responsive/current-sense-circuit-2xl.jpg 1600w"  alt="Level Shifter" width="743" height="417"></figure>
+<h2>LTSPICE SIMULATION CIRCUIT</h2>
+<p>The lTSPICE simulation files link is on the topmost of this page.</p>
+<figure class="post__image"><br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/7/high-side-current-sense-simulation-circuit.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-circuit-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-circuit-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-circuit-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-circuit-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-circuit-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-circuit-2xl.jpg 1600w"  alt="High Side Current Sense Simulation Circuit" width="827" height="740"></figure>
+<h2>RESULT</h2>
+<figure class="post__image"><br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/7/high-side-current-sense-simulation-result.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-result-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-result-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-result-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-result-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-result-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/7/responsive/high-side-current-sense-simulation-result-2xl.jpg 1600w"  alt="High side current sense simulation result" width="912" height="829"></figure>
+<h2> </h2>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>5V to 3.3V Peak Current Mode Buck Converter in the DSPIC33CH Curiosity Development Board</title>
+        <author>
+            <name>Andrew Mosqueda</name>
+        </author>
+        <link href="https://andrewmosqueda.github.io/current-mode/"/>
+        <id>https://andrewmosqueda.github.io/current-mode/</id>
+
+        <updated>2021-09-29T21:52:19+08:00</updated>
+            <summary>
+                <![CDATA[
+                    INTRODUCTION I will demonstrate here how to convert the previous voltage mode buck converter discussed in Voltage Mode Buck Converter to current mode. The code of the voltage mode buck converter is stored here. Before doing the coding, It is good to understand first each circuit&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>INTRODUCTION</h2>
+<p>I will demonstrate here how to convert the previous voltage mode buck converter discussed in <a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">Voltage Mode Buck Converter</a> to current mode. The code of the voltage mode buck converter is stored <a href="https://andrewmosqueda.github.io/media/files/discrete_buck_converter.zip" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<figure class="post__image">Below is the simplified schematic of the DM330028 board's buck converter with the dsPIC33CH128MP508 I/Os. In contrast with the voltage mode converter, the IC has additional input to monitor the Power MOSFET current via RA3_ISENSEH pin. The High-Speed Analog Comparator Module is utilized to monitor this current. The duty cycle of the PWM duty cycle is also fixed to a high value (95%). Instead of the PID function changing the PWM duty cycle, its result is converted into an analog voltage by the DAC and compared to the power MOSFET current by the Comparator. So when the sense current exceeds the DAC output, the comparator output will turn high. Inside the PWM module, there is a PWM Control Input Current Limit (PCI CL) logic circuit that monitors the analog comparator output and PWM states like End-of-Cycle (EOC). The PCI CL output toggles and truncates the PWM output whenever the Analog Comparator output turns  high. It then resets after detecting PWM EOC.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/close-loop-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-2xl.jpg 1600w"  alt="Current Mode Buck Converter" width="983" height="578"></figure>
+<p>Before doing the coding, It is good to understand first each circuit and modules.</p>
+<p>CURRENT SENSE CIRCUIT</p>
+<p>The power MOSFET Q6 high side current sense circuit is shown below. The voltage drop at R59 and R74 resistors is used to monitor the current at Q6. The purpose of R97 and R102 divider resistors is to make a positive bias at the dsPIC analog input pin. According to DS50002762A document, the purpose of the intentional small bias is to ensure that the current sense voltage signal is always within the internal analog comparator input sensing range and the internal DAC reachable range.</p>
+<p>I have written the derivation of the equations in mathcad (<a href="https://andrewmosqueda.github.io/media/files/High Side Current Measurement.mcdx" target="_blank" rel="noopener noreferrer">get mathcad file here</a>) and simulate in LTSPICE (<a href="https://andrewmosqueda.github.io/high-side-current-sense-circuit-simulation/" target="_blank" rel="noopener noreferrer">High Side Current Sense LTSPICE Simulation</a>) to easily understand the circuit. </p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/current-sense-resistors.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-resistors-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-resistors-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-resistors-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-resistors-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-resistors-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-resistors-2xl.jpg 1600w"  alt="DM330028 Current Sense Resistors" width="406" height="207"></figure>
+<figure class="post__image"><br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/current-sense-circuit-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-circuit-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-circuit-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-circuit-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-circuit-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-circuit-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/current-sense-circuit-2-2xl.jpg 1600w"  alt="High side current sense amplifier" width="743" height="417"></figure>
+<p>ANALOG COMPARATOR MODULE</p>
+<figure class="post__image">The RA3 pin of the dsPIC33CH IC will be configured as +input to an internal analog comparator. Below is the diagram of the internal analog comparator of the DSPIC33 IC  that is defined in DS70005280B document. The INSEL&lt;2:0&gt; register is set to S1CMP1A because this is the one connected to the RA3 pin. The PDM (Pulse Density Modulation) generates an analog voltage with level that that depends on the values stored on SLPxDAT, DACxDATH and DACxDATL registers. The SLPxDAT and DACxDATL are used in slope compensation. For simplicity of this exercise, the slope compensation feature of the PDM is disabled so the output will just depend on the DACxDATH register. The PID value is then stored to the DACxDATH register to dynamically adjust the comparator current threshold. DACOUT1 can be used to monitor the actual output of the PDM by an oscilloscope. The Digital Filter will also be enabled to filter unwanted output due to switching noise.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/Comparator.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-2xl.jpg 1600w"  alt="DSPIC33 High Speed Comparator Module" width="873" height="565"></figure>
+<p>PWM CONTROL INPUT CURRENT LIMIT (PCI CL)</p>
+<figure class="post__image">The output of the internal analog comparator described above is then fed to an internal PCI logic circuit as shown below. <br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/pci.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/pci-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/pci-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/pci-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/pci-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/pci-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/pci-2xl.jpg 1600w"  alt="PCI Function Block Diagram" width="933" height="656"></figure>
+<p>The ACP register above is set so that the PCI Acceptance Logic is in Latched Mode. The Latched Mode logic is shown below.</p>
+<figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/PCI-acceptance-logic-latched-mode.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/PCI-acceptance-logic-latched-mode-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PCI-acceptance-logic-latched-mode-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PCI-acceptance-logic-latched-mode-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PCI-acceptance-logic-latched-mode-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PCI-acceptance-logic-latched-mode-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PCI-acceptance-logic-latched-mode-2xl.jpg 1600w"  alt="PCI Acceptance Logic in Latched Mode" width="269" height="151"></figure>
+<p>The input to the <strong>PCI Source</strong> is set from the analog comparator output. The input to the <strong>Qualifier </strong>is set as LEB (Leading Edge Blanking Active). The LEB is a counter which starts after PWM7H rises up and resets/stop when PWM7H falls down .The purpose of the LEB qualifier is to prevent unwanted turn off of the PWM during start of cycle due to unwanted transients during switching. The input to the <strong>Terminator </strong>is the AND of Auto-Terminate and EOC Event. Auto-Terminate becomes high when the analog comparator transitions from high to low. The auto-terminate ensures  that the PWM output is turned off while the current is above threshold even if the EOC Event is already reached. </p>
+<p>I have simulated the PCI CL with the comparator, PWM and the buck converter circuit in LTSPICE to have better insight about the circuit operation. See <a href="https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/" target="_blank" rel="noopener noreferrer">PCI Current Limit Simulation.</a></p>
+<h2>PROCEDURE</h2>
+<ol>
+<li>Save the buck converter files to a different folder. </li>
+<li>Open MPLAB X IDE. After opening, close any opened projects.</li>
+<li>Open the master and slave projects of the voltage mode buck converter.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/projects.PNG" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/projects-xs.PNG 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/projects-sm.PNG 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/projects-md.PNG 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/projects-lg.PNG 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/projects-xl.PNG 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/projects-2xl.PNG 1600w"  alt="MPLAB Projects pane" width="190" height="390"></figure></li>
+<li>Ensure that the master project is the main project.</li>
+<li>Click the MCC button and wait the MCC to finish loading.</li>
+<li>In the Pin Manager: Grid View, set RB2 as owned by Slave Core. This pin will be use to monitor the the DAC reference for the internal analog comparator by an oscilloscope.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/Pin-Manager-RB2-DACout-slave-owned.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/Pin-Manager-RB2-DACout-slave-owned-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Pin-Manager-RB2-DACout-slave-owned-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Pin-Manager-RB2-DACout-slave-owned-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Pin-Manager-RB2-DACout-slave-owned-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Pin-Manager-RB2-DACout-slave-owned-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Pin-Manager-RB2-DACout-slave-owned-2xl.jpg 1600w"  alt="MPLAB MCC Pin Manager" width="612" height="173"></figure></li>
+<li>Click the Slave Core on the Project Resources pane to open the Slave Core Configuration.</li>
+<li>Click Slave Master Settings button.</li>
+<li>In the Project Resources pane, click the Generate button. Wait for the Generation Complete message to appear on the output prompt window.</li>
+<li> Click the MCC button to close the MCC application.</li>
+<li>Set the slave project as Main Project. </li>
+<li>Click the MCC button and wait the MCC to finish loading.</li>
+<li>On the Master Core configuration pane, click the Load Slave Settings from Master Configuration button. Locate and select the master_config.mc3 file that was generated by the master project MCC and then after that click the open button.</li>
+<li>On the System Module pane, tick PLL Enable, select 1:100 as Feedback and FVCO/2 as AVCO Divider. These frequency settings are needed for the Digital to Analog Converter of the Analog Comprator to function properly. <br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/system-module.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/system-module-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/system-module-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/system-module-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/system-module-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/system-module-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/system-module-2xl.jpg 1600w"  alt="MPLAB MCC System Module Settings" width="471" height="381"></figure></li>
+<li>On the Device Resources pane, click the + of CMP1 to move it to the Project Resources pane.</li>
+<li>On the CMP1 settings, tick Enable Comparator, Enable Digital Filter and Enable DAC Output. The digital filter is utilized to help filter out switching noises. The DAC output does not help on the operation of the comparator but is used to monitor and debug the comparator.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/Comparator-Settings.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-Settings-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-Settings-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-Settings-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-Settings-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-Settings-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/Comparator-Settings-2xl.jpg 1600w"  alt="MPLAB MCC CMP1 settings" width="580" height="488"></figure></li>
+<li>On the pin manager, let RA3 assigned to S1CMP1A. RA3 pin is connected to the output of the high current sense circuit of DM330038 board. Note that S1CMP1A is the one selected as the non-inverting input of the analog comparator on the above image.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/S1CMP1A.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/S1CMP1A-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/S1CMP1A-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/S1CMP1A-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/S1CMP1A-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/S1CMP1A-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/S1CMP1A-2xl.jpg 1600w"  alt="MPLAB MCC Pin Manager" width="408" height="265"></figure></li>
+<li>Open the PWM pane.</li>
+<li>Set the fixed Duty Cycle to 95%. <br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/PWM-duty-cycle.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/PWM-duty-cycle-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PWM-duty-cycle-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PWM-duty-cycle-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PWM-duty-cycle-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PWM-duty-cycle-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PWM-duty-cycle-2xl.jpg 1600w"  alt="MPLAB MCC PWM duty cycle settings" width="365" height="90"></figure></li>
+<li>Click on the Registers tab of the PWM settings. Wait the Registers tab to finish loading.</li>
+<li>Change the PG7CLPCIH settings to the same values with the image below. This register contains some of the settings to make the PCI becomes a current limit logic (<a href="https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/" target="_blank" rel="noopener noreferrer">See PCI-Current Limit Logic for more details</a>). <br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/PG7CLPCIH.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIH-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIH-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIH-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIH-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIH-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIH-2xl.jpg 1600w"  alt="MPLAB MCC PG7CLPCIH Settings" width="306" height="350"></figure></li>
+<li>Change the PG7CLPCIL settings to the same values with the image below. This register contains the other settings to make the PCI becomes a current limit logic (<a href="https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/" target="_blank" rel="noopener noreferrer">See PCI-Current Limit Logic for more details</a>). Also Slave Comparator 1 output is assigned as the input to the current limit logic.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/PG7CLPCIL.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIL-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIL-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIL-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIL-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIL-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7CLPCIL-2xl.jpg 1600w"  alt="MPLAB MCC PG7CLPCIL" width="357" height="350"></figure></li>
+<li>In the PG7IOCONH register, change the PENL value to disabled. This value ensures that the low side MOSFET does not turn on.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/PG7IOCONH.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/PG7IOCONH-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7IOCONH-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7IOCONH-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7IOCONH-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7IOCONH-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7IOCONH-2xl.jpg 1600w"  alt="MPLAB MCC PG7IOCONH Settings" width="322" height="315"></figure></li>
+<li>In the PG7LEBH register, change the PHF to enabled and PWMPCI to 7. The PHF means the PWM7H falling edge will trigger the LEB duration counter.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/PG7LEBH-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBH-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBH-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBH-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBH-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBH-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBH-2-2xl.jpg 1600w"  alt="MPLAB MCC PG7LEBH Register" width="200" height="241"></figure></li>
+<li>In Register: PG7LEBL, change the LEB value to 400. This is an arbitrary value and we can change later depending on the result.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/PG7LEBL.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBL-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBL-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBL-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBL-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBL-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/PG7LEBL-2xl.jpg 1600w"  alt="MPLAB MCC PGxLEBL" width="217" height="87"></figure></li>
+<li>On the Project Resources pane, click the Generate button, click Yes button on the MCC Warning confirmation and wait until Generation Complete message is displayed on the output prompt.</li>
+<li>Click the MCC button to close MCC. </li>
+<li>Open main.c file of the slave project.</li>
+<li>In the PID(void) interrupt handler function, In the last line replace PG7DC by DAC1DATH.  Basically, this means that the PID now is now fed to the Slave Comparator 1 negative input instead of directly adjusting the duty cycle of the PWM.</li>
+<li>On line 63 and 64, Change the p_gain to 0.5 and i_gain to 0.1.</li>
+<li>Set the master project as the Main Project.</li>
+<li>Connect the Curiosity Development Board to the PC.</li>
+<li>Click the make and program device button.</li>
+<li>Wait until the Programming/Verify complete is prompted in the output prompt window.</li>
+</ol>
+<h2>RESULT</h2>
+<p>Oscilloscope used: ADALM2000<br>Load:100Ω (Remove power while connecting the load).</p>
+<figure class="post__image">Below are the waveforms for RA3 (Orange, Current Sense Voltage) and RB2 (Purple, DAC output). These two waveforms are the input to the analog comparator. <br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/RA3vsRB2-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRB2-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRB2-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRB2-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRB2-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRB2-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRB2-2-2xl.jpg 1600w"  alt="Sensed Current and DAC waveform" width="1377" height="768"></figure>
+<figure class="post__image">Below are the waveforms of RA3 (Orange, Current Sense Voltage) and RC14 (Purple, PWM7H output).<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/RA3vsRC14-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRC14-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRC14-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRC14-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRC14-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRC14-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsRC14-2-2xl.jpg 1600w"  alt="Current Sense and PWM7H waveform" width="1371" height="768"></figure>
+<figure class="post__image">Below are the waveforms of RA3 (Orange, Current Sense Voltage) and VOUT (The output voltage of the converter). Output is the same with the voltage mode converter. See <a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">Voltage mode buck converter</a><br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/RA3vsVout.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsVout-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsVout-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsVout-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsVout-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsVout-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/RA3vsVout-2xl.jpg 1600w"  alt="Current Sense Voltage and Converter Output Voltage" width="1372" height="771"></figure>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Print debugging dsPIC in Real Time using UART and switch Interrupt</title>
         <author>
@@ -243,7 +473,7 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-09-12T10:33:21+08:00</updated>
+        <updated>2021-09-29T21:43:37+08:00</updated>
             <summary>
                 <![CDATA[
                     Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
@@ -389,7 +619,7 @@ The initialization of these SFRs will be automatically defined later on a pwm.c 
         <link href="https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/"/>
         <id>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</id>
 
-        <updated>2021-08-28T09:23:25+08:00</updated>
+        <updated>2021-09-26T09:22:31+08:00</updated>
             <summary>
                 <![CDATA[
                     If you are in a hurry and want to immediately verify the simulation, download and unzipped the file below then run the buck.asc file in LTSPICE: Discrete PWM buck converter This article presents a LTSPICE simulation of a PWM buck converter controlled by a discrete&hellip;

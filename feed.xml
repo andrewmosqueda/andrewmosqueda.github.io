@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-09-29T21:52:19+08:00</updated>
+    <updated>2021-09-30T19:53:09+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -168,16 +168,16 @@
         <link href="https://andrewmosqueda.github.io/current-mode/"/>
         <id>https://andrewmosqueda.github.io/current-mode/</id>
 
-        <updated>2021-09-29T21:52:19+08:00</updated>
+        <updated>2021-09-30T19:53:09+08:00</updated>
             <summary>
                 <![CDATA[
-                    INTRODUCTION I will demonstrate here how to convert the previous voltage mode buck converter discussed in Voltage Mode Buck Converter to current mode. The code of the voltage mode buck converter is stored here. Before doing the coding, It is good to understand first each circuit&hellip;
+                    INTRODUCTION I will demonstrate here how to convert the previous voltage mode buck converter discussed in Voltage Mode Buck Converter to current mode. The code of the voltage mode buck converter is stored Voltage Mode Buck Converter - MPLAB source code. Before doing the coding, It&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <h2>INTRODUCTION</h2>
-<p>I will demonstrate here how to convert the previous voltage mode buck converter discussed in <a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">Voltage Mode Buck Converter</a> to current mode. The code of the voltage mode buck converter is stored <a href="https://andrewmosqueda.github.io/media/files/discrete_buck_converter.zip" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>I will demonstrate here how to convert the previous voltage mode buck converter discussed in <a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">Voltage Mode Buck Converter</a> to current mode. The code of the voltage mode buck converter is stored <a href="https://andrewmosqueda.github.io/media/files/DM330028 buck converter vmode MPLAB.zip" target="_blank" rel="noopener noreferrer">Voltage Mode Buck Converter - MPLAB source code</a>.</p>
 <figure class="post__image">Below is the simplified schematic of the DM330028 board's buck converter with the dsPIC33CH128MP508 I/Os. In contrast with the voltage mode converter, the IC has additional input to monitor the Power MOSFET current via RA3_ISENSEH pin. The High-Speed Analog Comparator Module is utilized to monitor this current. The duty cycle of the PWM duty cycle is also fixed to a high value (95%). Instead of the PID function changing the PWM duty cycle, its result is converted into an analog voltage by the DAC and compared to the power MOSFET current by the Comparator. So when the sense current exceeds the DAC output, the comparator output will turn high. Inside the PWM module, there is a PWM Control Input Current Limit (PCI CL) logic circuit that monitors the analog comparator output and PWM states like End-of-Cycle (EOC). The PCI CL output toggles and truncates the PWM output whenever the Analog Comparator output turns  high. It then resets after detecting PWM EOC.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/close-loop-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-2xl.jpg 1600w"  alt="Current Mode Buck Converter" width="983" height="578"></figure>
 <p>Before doing the coding, It is good to understand first each circuit and modules.</p>
 <p>CURRENT SENSE CIRCUIT</p>

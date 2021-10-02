@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-09-30T21:43:50+08:00</updated>
+    <updated>2021-10-02T18:20:23+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -168,7 +168,7 @@
         <link href="https://andrewmosqueda.github.io/current-mode/"/>
         <id>https://andrewmosqueda.github.io/current-mode/</id>
 
-        <updated>2021-09-30T21:43:50+08:00</updated>
+        <updated>2021-10-02T18:20:23+08:00</updated>
             <summary>
                 <![CDATA[
                     INTRODUCTION I will demonstrate here how to convert the previous voltage mode buck converter discussed in Voltage Mode Buck Converter to current mode. The code of the voltage mode buck converter is stored here --&gt; Voltage Mode Buck Converter - MPLAB source code. Before doing&hellip;

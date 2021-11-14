@@ -3,12 +3,60 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-10-02T18:20:23+08:00</updated>
+    <updated>2021-11-14T22:16:00+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
     <id>https://andrewmosqueda.github.io</id>
 
+    <entry>
+        <title>Using the slope compensation for the current mode control</title>
+        <author>
+            <name>Andrew Mosqueda</name>
+        </author>
+        <link href="https://andrewmosqueda.github.io/using-the-slope-compensation-for-the-current-mode-control/"/>
+        <id>https://andrewmosqueda.github.io/using-the-slope-compensation-for-the-current-mode-control/</id>
+
+        <updated>2021-11-14T22:16:00+08:00</updated>
+            <summary>
+                <![CDATA[
+                    INTRODUCTION In the previous article Current Mode Converter , the PWM control is generated based from the comparison of the output of the DAC to the actual current of the high side mosfet. See illustration below. The DAC converts the digital result value of the PID&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>INTRODUCTION</h2>
+<figure class="post__image">In the previous article <a href="https://andrewmosqueda.github.io/current-mode/" target="_blank" rel="noopener noreferrer"></a><a href="https://andrewmosqueda.github.io/current-mode/" target="_blank" rel="noopener noreferrer">Current Mode Converter</a> , the PWM control is generated based from the comparison of the output of the DAC to the actual current of the high side mosfet. See illustration below.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/close-loop.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-2xl.jpg 1600w"  alt="Current Controlled Buck Converter" width="983" height="578"></figure>
+<figure class="post__image">The DAC converts the digital result value of the PID function  into analog. The DAC was configured in DC Mode as seen on the image below.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/CMP-DC-Mode.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-2xl.jpg 1600w"  alt="Comparator in DC Mode" width="679" height="519"></figure>
+<p>In the DC Mode, the output of the DAC changes only after the DACDATAH is updated.</p>
+<p>Actually, the DAC has a slope compensation feature in which the output of the DAC ramps down after DACDATAH is updated. This method makes the control more stable. In this article I will configure the DAC from DC Mode to slope compensation mode. </p>
+<h2>PROCEDURE</h2>
+<ol>
+<li>Open the master and slave projects of the current mode buck control in MPLAB IDE. The MPLAB code of the buck control project is stored here: <a href="https://andrewmosqueda.github.io/media/files/buck_ictrl.zip" target="_blank" rel="noopener noreferrer">buck_ictrl.zip</a></li>
+<li>Right click on the master project and make it the main project.</li>
+<li>Connect the DM330028 board to the PC. Click the "Make and Program" button on MPLAB to program the code to the dsPIC33 IC. Wait until a "Programming/Verify complete" message is prompted in the output window of MPLAB.</li>
+<li>If we connect an oscilloscope to RB2 and RA3, we would see the waveform below. We can see that the orange waveform (RA3) shuts off after reaching the purple waveform (RB2). The RB2 is the DC value output from the DAC and RA3 is the current sense signal that is fed to the comparator. Note: RB2 is not shown in the simplified schematic that is illustrated above.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/RA3vsRB2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/RA3vsRB2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/RA3vsRB2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/RA3vsRB2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/RA3vsRB2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/RA3vsRB2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/RA3vsRB2-2xl.jpg 1600w"  alt="waveform current mode" width="1377" height="768"></figure></li>
+<li>Right click on the slave project and make it the main project.</li>
+<li>Click MCC button and wait until the slave MCC is completely loaded.</li>
+<li>After the MCC is loaded, open the Master Core Configuration.</li>
+<li>In the Master Core Configuration window, click "Load Slave Settings from Master Configuration" button. Select the master_config.mc3 file in the master.X folder then click Open button. Wait until the Notifications [MCC] window is updated.</li>
+<li>In the Project Resources window, click CMP1 (Don't click X) to open the CMP1 analog comparator window. Wait until the window is completely loaded.</li>
+<li>Configure the DAC as shown below. I made the lowest value DACDATAL as 260 because this is 0 current offset value of the DM330028 current sense amplifier. In this configuration, the DAC output will start to ramp down after Slave PWM7 Trigger 1 and ramps back up after either Slave PWM7 Trigger2 or S1CMP1 Output is triggered.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/CMP-Slope-Mode.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-Slope-Mode-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-Slope-Mode-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-Slope-Mode-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-Slope-Mode-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-Slope-Mode-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-Slope-Mode-2xl.jpg 1600w"  alt="Slope Mode Current Control" width="1121" height="672"></figure></li>
+<li>In the Project Resources window, click PWM (Don't click X) to open the PWM window. Wait until the window is completely loaded.</li>
+<li>Expand the Trigger Control Settings and configure it as shown below. Trigger 1 is triggered 1us after the start of PWM cycle. We have now configure the DAC output to start ramping down after 1us after the start of PWM cycle. Trigger 2 is triggered 25us after the start of PWM cycle. 25us is the period of the 40kHz PWM so the DAC output will go back to DACDATH at the end of the PWM cycle.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/Trigger-Control-Settings-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/Trigger-Control-Settings-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/Trigger-Control-Settings-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/Trigger-Control-Settings-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/Trigger-Control-Settings-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/Trigger-Control-Settings-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/Trigger-Control-Settings-2-2xl.jpg 1600w"  alt="PWM Trigger Settings" width="696" height="394"></figure></li>
+<li>Click the Generate button. Click yes button in the confirmation dialog box and wait until Generation complete is prompted in the MCC output window.</li>
+<li>Click MCC toolbar button to close the MCC configurator application.</li>
+<li>In the projects pane, open main.c file of the slave project.</li>
+<li>In the PID function, add the highlighted code as shown below. <br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/PID-function.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/PID-function-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/PID-function-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/PID-function-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/PID-function-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/PID-function-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/PID-function-2xl.jpg 1600w"  alt="PID function" width="773" height="147"></figure>260 is the assigned value of the DAC1DATL. The multiplier 0.003 calculation is shown below.<br><figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/multipler.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/multipler-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/multipler-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/multipler-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/multipler-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/multipler-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/multipler-2xl.jpg 1600w"  alt="slope value multiplier calculation" width="479" height="303"></figure></li>
+<li>Right click on the master project file and set it as the main project.</li>
+<li>Click Make and Program button and wait until the Programming/Verify complete is prompted on the log window.</li>
+</ol>
+<h2>RESULT</h2>
+<figure class="post__image">Purple waveform - DAC output<br>Orange waveform - MOSFET current sense amplifier output<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/waveform.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/waveform-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/waveform-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/waveform-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/waveform-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/waveform-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/waveform-2xl.jpg 1600w"  alt="current mode control with slope compensation" width="853" height="476"></figure>
+<p>It can now be seen that the DAC output (purple) ramps down 1us after the MOSFET begins to conduct (orange waveform) and then quickly return back to high value after the MOSFET has turned off.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Simulation of the PCI-Current Limit Logic of dsPIC33CH</title>
         <author>
@@ -732,7 +780,7 @@ The initialization of these SFRs will be automatically defined later on a pwm.c 
         <link href="https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/"/>
         <id>https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</id>
 
-        <updated>2021-08-15T12:02:32+08:00</updated>
+        <updated>2021-11-14T15:35:35+08:00</updated>
             <summary>
                 <![CDATA[
                     If you are in a hurry and want to immediately verify its function, download and unzipped the file below then run the TestBench.asc file in LTSPICE: integrator.zip Below left is the schematic on the TestBench.asc file and below right side should be the result of&hellip;

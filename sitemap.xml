@@ -434,7 +434,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</loc>
-<lastmod>2021-08-15T12:02:32+08:00</lastmod>
+<lastmod>2021-11-14T15:35:35+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\1/integrator_bench.jpg</image:loc>
 <image:title><![CDATA[LTSPICE integrator]]></image:title>
@@ -514,6 +514,42 @@
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\8/waveforms-2.jpg</image:loc>
 <image:title><![CDATA[DSPIC33 PCI Current Limit Simulation]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://andrewmosqueda.github.io/using-the-slope-compensation-for-the-current-mode-control/</loc>
+<lastmod>2021-11-14T22:16:00+08:00</lastmod>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/close-loop.jpg</image:loc>
+<image:title><![CDATA[Current Controlled Buck Converter]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/CMP-DC-Mode.jpg</image:loc>
+<image:title><![CDATA[Comparator in DC Mode]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/RA3vsRB2.jpg</image:loc>
+<image:title><![CDATA[waveform current mode]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/CMP-Slope-Mode.jpg</image:loc>
+<image:title><![CDATA[Slope Mode Current Control]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/Trigger-Control-Settings-2.jpg</image:loc>
+<image:title><![CDATA[PWM Trigger Settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/PID-function.jpg</image:loc>
+<image:title><![CDATA[PID function]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/multipler.jpg</image:loc>
+<image:title><![CDATA[slope value multiplier calculation]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\9/waveform.jpg</image:loc>
+<image:title><![CDATA[current mode control with slope compensation]]></image:title>
 </image:image>
 </url>
 </urlset>

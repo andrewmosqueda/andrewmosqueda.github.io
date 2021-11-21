@@ -449,6 +449,34 @@
 </image:image>
 </url>
 <url>
+<loc>https://andrewmosqueda.github.io/ltspice-simulation-of-hysteretic-control-for-buck-converter/</loc>
+<lastmod>2021-11-21T10:04:41+08:00</lastmod>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\10/LTspice-simulation-5.jpg</image:loc>
+<image:title><![CDATA[Hysteretic current mode converter LTspice]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\10/high-side-current-sense-vs-mosfet-drive.jpg</image:loc>
+<image:title><![CDATA[high side current sense vs mosfet gate drive]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\10/terminator.jpg</image:loc>
+<image:title><![CDATA[comparator output]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\10/pid-code-3.jpg</image:loc>
+<image:title><![CDATA[PID c code in MPLAB]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\10/start.jpg</image:loc>
+<image:title><![CDATA[comparator output]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\10/CLC1-output.jpg</image:loc>
+<image:title><![CDATA[SR flip flop operation]]></image:title>
+</image:image>
+</url>
+<url>
 <loc>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>
 <lastmod>2021-09-26T09:22:31+08:00</lastmod>
 <image:image>

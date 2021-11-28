@@ -169,6 +169,178 @@
 </image:image>
 </url>
 <url>
+<loc>https://andrewmosqueda.github.io/hysteretic-current-mode-buck-converter-for-dspic33/</loc>
+<lastmod>2021-11-28T16:36:01+08:00</lastmod>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/power-circuit.jpg</image:loc>
+<image:title><![CDATA[dsPIC33CH Curiosity Development Board Buck/Boost Converter]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/high-side-current-level-shifter.jpg</image:loc>
+<image:title><![CDATA[High Side Current Sense Circuit]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/output-voltage-feedback-sense.jpg</image:loc>
+<image:title><![CDATA[voltage feedback sense circuit]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/master-new-project.jpg</image:loc>
+<image:title><![CDATA[MPLAB Create Project]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/MPLAB-select-device.jpg</image:loc>
+<image:title><![CDATA[MPLAB new project - select device]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/select-compiler.jpg</image:loc>
+<image:title><![CDATA[MPLAB select compiler]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/project-name-and-folder.jpg</image:loc>
+<image:title><![CDATA[MPLAB Select Project Name and Folder]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/select-slave-device.jpg</image:loc>
+<image:title><![CDATA[MPLAB Select slave device]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/slave-project-name-and-folder.jpg</image:loc>
+<image:title><![CDATA[MPLAB slave project name and folder]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/MPLAB_Set_main_project.jpg</image:loc>
+<image:title><![CDATA[MPLAB master set as main project]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/mcc-button.jpg</image:loc>
+<image:title><![CDATA[MCC button]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/device-resources-slave-core.jpg</image:loc>
+<image:title><![CDATA[MCC Device Resources Slave Core]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/project-resources-slave-core.jpg</image:loc>
+<image:title><![CDATA[MCC Project Resources  - Slave Core]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/master-slave-core-configuration.jpg</image:loc>
+<image:title><![CDATA[MCC master slave peripheral configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/master-slave-peripheral-2.jpg</image:loc>
+<image:title><![CDATA[slave peripheral clock pin]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/master-pin-manager.jpg</image:loc>
+<image:title><![CDATA[MPLAB master slave peripheral ownership]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/master-clock-output-pin-configuration.jpg</image:loc>
+<image:title><![CDATA[MCC master clock output pin configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/system-module-2.jpg</image:loc>
+<image:title><![CDATA[MCC Slave System module]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/device-resources-adc1.jpg</image:loc>
+<image:title><![CDATA[MCC device resources - ADC1]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/adc1-settings.jpg</image:loc>
+<image:title><![CDATA[MCC Slave ADC configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/device-resources-tmr1.jpg</image:loc>
+<image:title><![CDATA[MCC Device Resources timer]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/TMR1-settings.jpg</image:loc>
+<image:title><![CDATA[MCC TMR1 peripheral settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/device-resources-cmp1.jpg</image:loc>
+<image:title><![CDATA[MCC Device resources CMP1]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/CMP1-settings.jpg</image:loc>
+<image:title><![CDATA[MCC CMP1 settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/device-resources-pga2.jpg</image:loc>
+<image:title><![CDATA[MCC device resources PGA]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/pga2-settings.jpg</image:loc>
+<image:title><![CDATA[MCC PGA settings]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/device-resources-cmp2.jpg</image:loc>
+<image:title><![CDATA[MCC Device Resources  - CMP2]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/cmp2-savings.jpg</image:loc>
+<image:title><![CDATA[MCC CMP2 configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/device-resources-clc1.jpg</image:loc>
+<image:title><![CDATA[MCC Device Resources - CLC1]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/clc1-settings.jpg</image:loc>
+<image:title><![CDATA[MCC CLC1 configuration]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/slave-pin-manager.jpg</image:loc>
+<image:title><![CDATA[MCC Slave pin manager]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/pin-module.jpg</image:loc>
+<image:title><![CDATA[MCC Slave Pin Module]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/MCC-slave-notifications.jpg</image:loc>
+<image:title><![CDATA[MCC Slave notification ]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/MPLAB_add_secondary_project.jpg</image:loc>
+<image:title><![CDATA[MPLAB add slave to compile]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/Add-secondary-project.jpg</image:loc>
+<image:title><![CDATA[MPLAB Add secondary project dialog box]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/slave-project-main.jpg</image:loc>
+<image:title><![CDATA[MPLAB Slave project main.c]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/make-and-program-device-main-project-button.jpg</image:loc>
+<image:title><![CDATA[MPLAB make and program device main project]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/mplab-window-programming-verify-complete.jpg</image:loc>
+<image:title><![CDATA[MPLAB programming/verify complete]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/result-Vout-Q6-CMP1-CMP2.jpg</image:loc>
+<image:title><![CDATA[Scopy ]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/result-CMP1-DAC-Q6-2.jpg</image:loc>
+<image:title><![CDATA[scopy]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/result-PGA1-Q6.jpg</image:loc>
+<image:title><![CDATA[scopy]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://andrewmosqueda.github.io/media\posts\11/result-PGA2-Q6-2.jpg</image:loc>
+<image:title><![CDATA[scopy]]></image:title>
+</image:image>
+</url>
+<url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</loc>
 <lastmod>2021-09-30T19:55:35+08:00</lastmod>
 <image:image>
@@ -302,7 +474,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-09-29T21:43:37+08:00</lastmod>
+<lastmod>2021-11-27T08:12:15+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>
@@ -434,7 +606,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</loc>
-<lastmod>2021-11-14T15:35:35+08:00</lastmod>
+<lastmod>2021-11-28T16:33:53+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\1/integrator_bench.jpg</image:loc>
 <image:title><![CDATA[LTSPICE integrator]]></image:title>
@@ -475,6 +647,9 @@
 <image:loc>https://andrewmosqueda.github.io/media\posts\10/CLC1-output.jpg</image:loc>
 <image:title><![CDATA[SR flip flop operation]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://andrewmosqueda.github.io/page/2/</loc>
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>

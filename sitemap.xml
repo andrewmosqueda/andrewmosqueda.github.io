@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/current-mode/</loc>
-<lastmod>2021-10-02T18:20:23+08:00</lastmod>
+<lastmod>2021-11-28T16:49:20+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\6/close-loop-2.jpg</image:loc>
 <image:title><![CDATA[Current Mode Buck Converter]]></image:title>
@@ -90,7 +90,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/</loc>
-<lastmod>2021-09-11T10:15:08+08:00</lastmod>
+<lastmod>2021-11-28T16:49:30+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\5/dsPIC33CH-Curiosity-board-UART-circuit.jpg</image:loc>
 <image:title><![CDATA[DM330028 dsPIC33CH Curiosity Development Board UART circuit]]></image:title>
@@ -150,7 +150,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/high-side-current-sense-circuit-simulation/</loc>
-<lastmod>2021-09-30T20:02:09+08:00</lastmod>
+<lastmod>2021-11-28T16:49:05+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\7/current-sense-resistors.jpg</image:loc>
 <image:title><![CDATA[High Side Current Sense Resistors]]></image:title>
@@ -170,7 +170,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/hysteretic-current-mode-buck-converter-for-dspic33/</loc>
-<lastmod>2021-11-28T16:36:01+08:00</lastmod>
+<lastmod>2021-11-28T16:44:28+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\11/power-circuit.jpg</image:loc>
 <image:title><![CDATA[dsPIC33CH Curiosity Development Board Buck/Boost Converter]]></image:title>
@@ -342,7 +342,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-09-30T19:55:35+08:00</lastmod>
+<lastmod>2021-11-28T16:49:41+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\4/BuckBoost_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330038 DSPIC33CH Curiosity Development Board Buck Boost Circuit]]></image:title>
@@ -474,7 +474,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</loc>
-<lastmod>2021-11-27T08:12:15+08:00</lastmod>
+<lastmod>2021-11-28T16:49:57+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\3/Buck_Power_Circuit.png</image:loc>
 <image:title><![CDATA[DM330028 Buck Converter Power Circuit]]></image:title>
@@ -606,7 +606,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/implementing-a-discrete-integrator-in-ltspice/</loc>
-<lastmod>2021-11-28T16:33:53+08:00</lastmod>
+<lastmod>2021-11-28T16:50:38+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\1/integrator_bench.jpg</image:loc>
 <image:title><![CDATA[LTSPICE integrator]]></image:title>
@@ -622,7 +622,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/ltspice-simulation-of-hysteretic-control-for-buck-converter/</loc>
-<lastmod>2021-11-21T10:04:41+08:00</lastmod>
+<lastmod>2021-11-28T16:47:59+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\10/LTspice-simulation-5.jpg</image:loc>
 <image:title><![CDATA[Hysteretic current mode converter LTspice]]></image:title>
@@ -653,7 +653,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</loc>
-<lastmod>2021-09-26T09:22:31+08:00</lastmod>
+<lastmod>2021-11-28T16:50:25+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\2/discrete_buck_pwm.jpg</image:loc>
 <image:title><![CDATA[LTSPICE Digital PWM Buck Converter]]></image:title>
@@ -697,7 +697,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/</loc>
-<lastmod>2021-09-29T21:48:19+08:00</lastmod>
+<lastmod>2021-11-28T16:48:49+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\8/close-loop.jpg</image:loc>
 <image:title><![CDATA[Buck Converter with dsPIC33CH]]></image:title>
@@ -721,7 +721,7 @@
 </url>
 <url>
 <loc>https://andrewmosqueda.github.io/using-the-slope-compensation-for-the-current-mode-control/</loc>
-<lastmod>2021-11-14T22:16:00+08:00</lastmod>
+<lastmod>2021-11-28T16:48:34+08:00</lastmod>
 <image:image>
 <image:loc>https://andrewmosqueda.github.io/media\posts\9/close-loop.jpg</image:loc>
 <image:title><![CDATA[Current Controlled Buck Converter]]></image:title>

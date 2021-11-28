@@ -3,7 +3,7 @@
     <title>Andrew Mosqueda</title>
     <link href="https://andrewmosqueda.github.io/feed.xml" rel="self" />
     <link href="https://andrewmosqueda.github.io" />
-    <updated>2021-11-28T16:36:01+08:00</updated>
+    <updated>2021-11-28T16:50:25+08:00</updated>
     <author>
         <name>Andrew Mosqueda</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://andrewmosqueda.github.io/hysteretic-current-mode-buck-converter-for-dspic33/"/>
         <id>https://andrewmosqueda.github.io/hysteretic-current-mode-buck-converter-for-dspic33/</id>
 
-        <updated>2021-11-28T16:36:01+08:00</updated>
+        <updated>2021-11-28T16:44:28+08:00</updated>
             <summary>
                 <![CDATA[
                     INTRODUCTION In this article, a hysteretic current control for a 5V to 3.3V buck converter will be implemented in the DM330028 dsPIC33CH Curiosity Development Board. The buck inductor current in a hysteretic current mode flows in a critical conduction so the controller must immediately turn&hellip;
@@ -139,15 +139,18 @@
         <link href="https://andrewmosqueda.github.io/ltspice-simulation-of-hysteretic-control-for-buck-converter/"/>
         <id>https://andrewmosqueda.github.io/ltspice-simulation-of-hysteretic-control-for-buck-converter/</id>
 
-        <updated>2021-11-21T10:04:41+08:00</updated>
+        <updated>2021-11-28T16:47:59+08:00</updated>
             <summary>
                 <![CDATA[
-                    INTRODUCTION In this article, LTspice simulation of a 5V to 3.3V buck converter using hysteretic current control is presented. The circuit simulated here is the power circuit included in the DM330028 dsPIC33CH Curiosity Developement Board. The control method is an emulation of components and programming&hellip;
+                     In this article, LTspice simulation of a 5V to 3.3V buck converter using hysteretic current control is presented. The circuit simulated here is the power circuit included in the DM330028 dsPIC33CH Curiosity Developement Board. The control method is an emulation of components and programming&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>INTRODUCTION</h2>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<h2>INTRODUCTION</h2>
 <p>In this article, LTspice simulation of a 5V to 3.3V buck converter using hysteretic current control is presented. The circuit simulated here is the power circuit included in the DM330028 dsPIC33CH Curiosity Developement Board. The control method is an emulation of components and programming of dsPIC33CH. The aim of the simulation is to have an insight on how to configure and program the dsPIC33CH for hysteretic current control.</p>
 <h2>LTSPICE SCHEMATIC</h2>
 <figure class="post__image"><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/10/LTspice-simulation-5.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/10/responsive/LTspice-simulation-5-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/10/responsive/LTspice-simulation-5-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/10/responsive/LTspice-simulation-5-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/10/responsive/LTspice-simulation-5-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/10/responsive/LTspice-simulation-5-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/10/responsive/LTspice-simulation-5-2xl.jpg 1600w"  alt="Hysteretic current mode converter LTspice" width="867" height="877"></figure>
@@ -181,15 +184,18 @@
         <link href="https://andrewmosqueda.github.io/using-the-slope-compensation-for-the-current-mode-control/"/>
         <id>https://andrewmosqueda.github.io/using-the-slope-compensation-for-the-current-mode-control/</id>
 
-        <updated>2021-11-14T22:16:00+08:00</updated>
+        <updated>2021-11-28T16:48:34+08:00</updated>
             <summary>
                 <![CDATA[
-                    INTRODUCTION In the previous article Current Mode Converter , the PWM control is generated based from the comparison of the output of the DAC to the actual current of the high side mosfet. See illustration below. The DAC converts the digital result value of the PID&hellip;
+                     In the DC Mode, the output of the DAC changes only after the DACDATAH is updated. Actually, the DAC has a slope compensation feature in which the output of the DAC ramps down after DACDATAH is updated. This method makes the control more stable.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>INTRODUCTION</h2>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<h2>INTRODUCTION</h2>
 <figure class="post__image">In the previous article <a href="https://andrewmosqueda.github.io/current-mode/" target="_blank" rel="noopener noreferrer"></a><a href="https://andrewmosqueda.github.io/current-mode/" target="_blank" rel="noopener noreferrer">Current Mode Converter</a> , the PWM control is generated based from the comparison of the output of the DAC to the actual current of the high side mosfet. See illustration below.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/close-loop.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/close-loop-2xl.jpg 1600w"  alt="Current Controlled Buck Converter" width="983" height="578"></figure>
 <figure class="post__image">The DAC converts the digital result value of the PID function  into analog. The DAC was configured in DC Mode as seen on the image below.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/9/CMP-DC-Mode.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/9/responsive/CMP-DC-Mode-2xl.jpg 1600w"  alt="Comparator in DC Mode" width="679" height="519"></figure>
 <p>In the DC Mode, the output of the DAC changes only after the DACDATAH is updated.</p>
@@ -229,15 +235,18 @@
         <link href="https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/"/>
         <id>https://andrewmosqueda.github.io/simulation-of-the-pwm-control-input-pci-current-limit-logic-of-dspic33ch/</id>
 
-        <updated>2021-09-29T21:48:19+08:00</updated>
+        <updated>2021-11-28T16:48:49+08:00</updated>
             <summary>
                 <![CDATA[
-                    INTRODUCTION The dsPIC33CH IC has a PCI CL (PWM Control Input-Current Limit) Logic that is use for Current Mode Controlled Converter. An equivalent circuit in LTSPICE is simulated to gain better insights of this logic system. The simulated circuit is based on actual circuit values&hellip;
+                     The dsPIC33CH IC has a PCI CL (PWM Control Input-Current Limit) Logic that is use for Current Mode Controlled Converter. An equivalent circuit in LTSPICE is simulated to gain better insights of this logic system. The simulated circuit is based on actual circuit values&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>INTRODUCTION</h2>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<h2>INTRODUCTION</h2>
 <p>The dsPIC33CH IC has a PCI CL (PWM Control Input-Current Limit) Logic that is use for Current Mode Controlled Converter. An equivalent circuit in LTSPICE is simulated to gain better insights of this logic system. The simulated circuit is based on actual circuit values in the DM330038 dsPIC33CH Curiosity Development Board.</p>
 <p>SIMPLIFIED BUCK CONVERTER SCHEMATIC</p>
 <figure class="post__image">Below is a simplified schematic of the current mode controlled buck converter of the board with connection to the dsPIC33CH IC. The PWM duty cycle is fixed at usually 95%. the PCI CL purpose is to override (block or truncate) the PWM output everytime the output of the current sense circuit exceeds the reference value. The reference value is an analog voltage generated from the PID by a DAC.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/8/close-loop.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/8/responsive/close-loop-2xl.jpg 1600w"  alt="Buck Converter with dsPIC33CH" width="983" height="578"></figure>
@@ -350,15 +359,18 @@
         <link href="https://andrewmosqueda.github.io/high-side-current-sense-circuit-simulation/"/>
         <id>https://andrewmosqueda.github.io/high-side-current-sense-circuit-simulation/</id>
 
-        <updated>2021-09-30T20:02:09+08:00</updated>
+        <updated>2021-11-28T16:49:05+08:00</updated>
             <summary>
                 <![CDATA[
-                    LTSPICE simulation files: High Side Current Sense LTSPICE simulation Mathcad files: High Side Current Sense Calculations The high side current sense circuit of DM330028 dsPIC33CH Curiosity Development board as shown below is simulated in LTSPICE and results are shown after. I also included a mathcad calculation&hellip;
+                     LTSPICE simulation files: High Side Current Sense LTSPICE simulation Mathcad files: High Side Current Sense Calculations The high side current sense circuit of DM330028 dsPIC33CH Curiosity Development board as shown below is simulated in LTSPICE and results are shown after. I also included a mathcad&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>LTSPICE simulation files: <a href="https://andrewmosqueda.github.io/media/files/high_side_current_sense.zip" target="_blank" rel="noopener noreferrer">High Side Current Sense LTSPICE simulation</a></p>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<p>LTSPICE simulation files: <a href="https://andrewmosqueda.github.io/media/files/high_side_current_sense.zip" target="_blank" rel="noopener noreferrer">High Side Current Sense LTSPICE simulation</a></p>
 <p>Mathcad files: <a href="https://andrewmosqueda.github.io/media/files/High Side Current Measurement.mcdx" target="_blank" rel="noopener noreferrer">High Side Current Sense Calculations</a></p>
 <h2>INTRODUCTION</h2>
 <p>The high side current sense circuit of DM330028 dsPIC33CH Curiosity Development board as shown below is simulated in LTSPICE and results are shown after. I also included a mathcad calculation file to quickly verify the results.</p>
@@ -380,15 +392,18 @@
         <link href="https://andrewmosqueda.github.io/current-mode/"/>
         <id>https://andrewmosqueda.github.io/current-mode/</id>
 
-        <updated>2021-10-02T18:20:23+08:00</updated>
+        <updated>2021-11-28T16:49:20+08:00</updated>
             <summary>
                 <![CDATA[
-                    INTRODUCTION I will demonstrate here how to convert the previous voltage mode buck converter discussed in Voltage Mode Buck Converter to current mode. The code of the voltage mode buck converter is stored here --&gt; Voltage Mode Buck Converter - MPLAB source code. Before doing&hellip;
+                     I will demonstrate here how to convert the previous voltage mode buck converter discussed in Voltage Mode Buck Converter to current mode. The code of the voltage mode buck converter is stored here --&gt; Voltage Mode Buck Converter - MPLAB source code. Before doing&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>INTRODUCTION</h2>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<h2>INTRODUCTION</h2>
 <p>I will demonstrate here how to convert the previous voltage mode buck converter discussed in <a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">Voltage Mode Buck Converter</a> to current mode. The code of the voltage mode buck converter is stored here --&gt; <a href="https://andrewmosqueda.github.io/media/files/DM330028 buck converter vmode MPLAB.zip" target="_blank" rel="noopener noreferrer">Voltage Mode Buck Converter - MPLAB source code</a>.</p>
 <figure class="post__image">Below is the simplified schematic of the DM330028 board's buck converter with the dsPIC33CH128MP508 I/Os. In contrast with the voltage mode converter, the IC has additional input to monitor the Power MOSFET current via RA3_ISENSEH pin. The High-Speed Analog Comparator Module is utilized to monitor this current. The duty cycle of the PWM duty cycle is also fixed to a high value (95%). Instead of the PID function changing the PWM duty cycle, its result is converted into an analog voltage by the DAC and compared to the power MOSFET current by the Comparator. So when the sense current exceeds the DAC output, the comparator output will turn high. Inside the PWM module, there is a PWM Control Input Current Limit (PCI CL) logic circuit that monitors the analog comparator output and PWM states like End-of-Cycle (EOC). The PCI CL output toggles and truncates the PWM output whenever the Analog Comparator output turns high. It then resets after detecting PWM EOC.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/6/close-loop-2.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/6/responsive/close-loop-2-2xl.jpg 1600w"  alt="Current Mode Buck Converter" width="983" height="578"></figure>
 <p>Before doing the coding, it is good to understand first each circuit and modules.</p>
@@ -459,15 +474,18 @@
         <link href="https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/"/>
         <id>https://andrewmosqueda.github.io/debugging-dspic-using-uart-and-switch-interrupt/</id>
 
-        <updated>2021-09-11T10:15:08+08:00</updated>
+        <updated>2021-11-28T16:49:30+08:00</updated>
             <summary>
                 <![CDATA[
-                    Introduction This is a tutorial on how to monitor the variables of a dsPIC33CH program in real time specifically on the DM330028 dsPIC33CH Curiosity Development Board using UART and switch Interrupt in MPLAB and MCC. The UART and switch Interrupts will be added to a&hellip;
+                     This is a tutorial on how to monitor the variables of a dsPIC33CH program in real time specifically on the DM330028 dsPIC33CH Curiosity Development Board using UART and switch Interrupt in MPLAB and MCC. The UART and switch Interrupts will be added to a&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>Introduction</h2>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<h2>Introduction</h2>
 <p>This is a tutorial on how to monitor the variables of a dsPIC33CH program in real time specifically on the DM330028 dsPIC33CH Curiosity Development Board using UART and switch Interrupt in MPLAB and MCC. The UART and switch Interrupts will be added to a previous MPLAB project (<a href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/" target="_blank" rel="noopener noreferrer">Buck Converter) </a>for simplicity of the explanation.</p>
 <h2>Procedure</h2>
 <ol>
@@ -533,15 +551,18 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-12v-pwm-boos-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-09-30T19:55:35+08:00</updated>
+        <updated>2021-11-28T16:49:41+08:00</updated>
             <summary>
                 <![CDATA[
-                    Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
+                     The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>Introduction</h2>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<h2>Introduction</h2>
 <p> The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found hard to comprehend. So I made my own program that is written in C language and using PID for the close loop control. Only voltage loop control is covered by this topic.</p>
 <h2>Buck-Boost Converter Circuit</h2>
 <p>Figure 1 below is the schematic of the buck boost circuit of the DSPIC33CH Curiosity Board. The DSPIC IC can control the boost transistor (Q2) switching through the RC15_S1PWM7L connection. The DSPIC IC should set low the RC14_S1PWM7H so that the Q6 P-MOSFET is always on (switch closed). </p>
@@ -685,15 +706,18 @@
         <link href="https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/"/>
         <id>https://andrewmosqueda.github.io/implementing-5v-to-33v-buck-converter-in-the-dspic33ch-curiosity-development-board/</id>
 
-        <updated>2021-11-27T08:12:15+08:00</updated>
+        <updated>2021-11-28T16:49:57+08:00</updated>
             <summary>
                 <![CDATA[
-                    Introduction The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
+                     The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>Introduction</h2>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<h2>Introduction</h2>
 <p>The dsPIC33CH Curiosity Development Board (DM330028) has a built in buck-boost circuit that we can experiment with. Unfortunately in the time of this writing, the code for the buck-boost converter that is provided by Microchip is only written in assembly language which I found hard to comprehend. So I made my own program that is written in C language and using PID for the close loop control. Only voltage loop control is covered by this topic.  </p>
 <h2>Buck-Boost Converter Circuit</h2>
 <p>Figure 1 below is the schematic of the buck boost circuit of the DSPIC33CH Curiosity Board. The DSPIC IC can control the buck transistor (Q6) switching through the RC14_S1PWM7H connection. Q6 is a PMOS so it needs a logic 0 (Active-low) to turn it on. The output of the converter (Vout) is sensed by the DSPIC IC through RC1_VOUTFB connection as shown in Figure 2. <strong>Make sure that J13 is shorted on the board</strong>. Removing the short on J13 will decrease the gain, make the sense voltage small and will have low resolution in the ADC. Removing the short on J13 is useful for boost operation because a higher output voltage will need a lower gain sense resistors. I am connecting a 91Ω resistor as load. For a 3.3V output, the power that will be drawn by the resistor is 3.3V*3.3V/91Ω = 120 milliwatt. RC15_S1PWM7L should be set to low all the time so that the boost transistor (Q2) is always open. </p>
@@ -831,15 +855,18 @@ The initialization of these SFRs will be automatically defined later on a pwm.c 
         <link href="https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/"/>
         <id>https://andrewmosqueda.github.io/simulation-of-buck-converter-using-discrete-pid-in-ltspice/</id>
 
-        <updated>2021-09-26T09:22:31+08:00</updated>
+        <updated>2021-11-28T16:50:25+08:00</updated>
             <summary>
                 <![CDATA[
-                    If you are in a hurry and want to immediately verify the simulation, download and unzipped the file below then run the buck.asc file in LTSPICE: Discrete PWM buck converter This article presents a LTSPICE simulation of a PWM buck converter controlled by a discrete&hellip;
+                     If you are in a hurry and want to immediately verify the simulation, download and unzipped the file below then run the buck.asc file in LTSPICE: Discrete PWM buck converter This article presents a LTSPICE simulation of a PWM buck converter controlled by a&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>If you are in a hurry and want to immediately verify the simulation, download and unzipped the file below then run the buck.asc file in LTSPICE:</p>
+                <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2158060120252492" crossorigin="anonymous"></script>
+</p>
+<p>If you are in a hurry and want to immediately verify the simulation, download and unzipped the file below then run the buck.asc file in LTSPICE:</p>
 <p><a href="https://andrewmosqueda.github.io/media/files/discrete_buck_converter.zip" target="_blank" rel="noopener noreferrer">Discrete PWM buck converter</a></p>
 <figure class="post__image">Below left is the schematic on the buck.asc file and below right should be the result of the LTSPICE simulation.<br><img loading="lazy"  src="https://andrewmosqueda.github.io/media/posts/2/discrete_buck_pwm.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-xs.jpg 300w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-sm.jpg 480w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-md.jpg 768w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-lg.jpg 1024w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-xl.jpg 1360w ,https://andrewmosqueda.github.io/media/posts/2/responsive/discrete_buck_pwm-2xl.jpg 1600w"  alt="LTSPICE Digital PWM Buck Converter" width="1916" height="922"></figure>
 <h2>Introduction</h2>
